@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipr – Dashboard mockup (portable)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./clipr-dashboard-mockup.css" />
+    <style>
+      /* Solo demo: fondo de página */
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: #060510;
+        font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      COPIA DESDE AQUÍ en tu proyecto (mantén las clases clipr-*)
+      Necesitas: Font Awesome + clipr-dashboard-mockup.css
+    -->
+    <div class="clipr-dashboard-mockup-wrap">
+      <p style="color: #6b6b7b; font-size: 12px; margin-bottom: 16px; text-align: center">
+        Demo ·
+        <button
+          type="button"
+          onclick="cliprDashboardMockup.setLang('en'); try{localStorage.setItem('clipr_mockup_lang','en')}catch(e){}"
+          style="background: transparent; border: none; color: #a78bfa; cursor: pointer"
+        >
+          EN
+        </button>
+        ·
+        <button
+          type="button"
+          onclick="cliprDashboardMockup.setLang('es'); try{localStorage.setItem('clipr_mockup_lang','es')}catch(e){}"
+          style="background: transparent; border: none; color: #a78bfa; cursor: pointer"
+        >
+          ES
+        </button>
+      </p>
+
+      <div class="clipr-hero-visual">
+        <div class="clipr-hero-mockup">
+          <div class="clipr-mockup-header">
+            <div class="clipr-mockup-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="clipr-mockup-title">
+              <img
+                class="clipr-mockup-logo"
+                src="../../favicon.svg"
+                width="26"
+                height="26"
+                alt=""
+                decoding="async"
+              />
+              <span class="clipr-mockup-wordmark">Clipr</span>
+            </div>
+          </div>
+          <div class="clipr-mockup-content">
+            <div class="clipr-mockup-sidebar">
+              <div class="clipr-sidebar-item active" aria-hidden="true"><i class="fas fa-home"></i></div>
+              <div class="clipr-sidebar-item" aria-hidden="true"><i class="fas fa-video"></i></div>
+              <div class="clipr-sidebar-item" aria-hidden="true"><i class="fas fa-scissors"></i></div>
+              <div class="clipr-sidebar-item" aria-hidden="true"><i class="fas fa-calendar"></i></div>
+              <div class="clipr-sidebar-item" aria-hidden="true"><i class="fas fa-chart-bar"></i></div>
+            </div>
+            <div class="clipr-mockup-main">
+              <div class="clipr-mockup-stat-row">
+                <div class="clipr-mini-stat">
+                  <div class="clipr-mini-stat-icon"><i class="fas fa-eye" aria-hidden="true"></i></div>
+                  <div class="clipr-mini-stat-info">
+                    <span class="clipr-mini-stat-value">2.4M</span>
+                    <span class="clipr-mini-stat-label">Total plays</span>
+                  </div>
+                </div>
+                <div class="clipr-mini-stat">
+                  <div class="clipr-mini-stat-icon"><i class="fas fa-film" aria-hidden="true"></i></div>
+                  <div class="clipr-mini-stat-info">
+                    <span class="clipr-mini-stat-value">847</span>
+                    <span class="clipr-mini-stat-label">Clips cut</span>
+                  </div>
+                </div>
+              </div>
+              <div class="clipr-mockup-clips">
+                <div class="clipr-clip-card">
+                  <img
+                    src="../clip1.png"
+                    alt=""
+                    class="clipr-clip-thumb"
+                    loading="lazy"
+                    width="200"
+                    height="126"
+                  />
+                  <div class="clipr-clip-info">
+                    <div class="clipr-clip-title">Ace + spray transfer — ranked</div>
+                    <div class="clipr-clip-meta">Highlight · 2.3K plays</div>
+                  </div>
+                </div>
+                <div class="clipr-clip-card">
+                  <img
+                    src="../clip2.png"
+                    alt=""
+                    class="clipr-clip-thumb"
+                    loading="lazy"
+                    width="200"
+                    height="126"
+                  />
+                  <div class="clipr-clip-info">
+                    <div class="clipr-clip-title">Facecam tilt → insane comeback</div>
+                    <div class="clipr-clip-meta">9:16 clip · 5.1K</div>
+                  </div>
+                </div>
+                <div class="clipr-clip-card">
+                  <img
+                    src="../clip3.png"
+                    alt=""
+                    class="clipr-clip-thumb"
+                    loading="lazy"
+                    width="200"
+                    height="126"
+                  />
+                  <div class="clipr-clip-info">
+                    <div class="clipr-clip-title">1v4 clutch — OT steal</div>
+                    <div class="clipr-clip-meta">Shorts viral · 8.7K</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="clipr-floating-card clipr-floating-card--1">
+          <div class="clipr-floating-icon tiktok"><i class="fab fa-tiktok" aria-hidden="true"></i></div>
+          <div class="clipr-floating-text">Live on TikTok FYP</div>
+          <div class="clipr-floating-check"><i class="fas fa-check" aria-hidden="true"></i></div>
+        </div>
+        <div class="clipr-floating-card clipr-floating-card--2">
+          <div class="clipr-floating-icon instagram"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+          <div class="clipr-floating-text">+12.4K in 24h</div>
+        </div>
+        <div class="clipr-floating-card clipr-floating-card--3">
+          <div class="clipr-floating-icon youtube"><i class="fab fa-youtube" aria-hidden="true"></i></div>
+          <div class="clipr-floating-text">Export 9:16 · ready</div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN COPIA -->
+
+    <script src="./clipr-dashboard-mockup.js"></script>
+  </body>
+</html>

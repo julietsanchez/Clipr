@@ -1,0 +1,356 @@
+/**
+ * Clipr – Dashboard mockup (hero visual)
+ * Copiar este archivo + HTML + JS opcional a tu proyecto.
+ * Requiere: Font Awesome 6.x
+ */
+
+@keyframes clipr-mockup-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Variables acotadas al mockup + contenedor (no usar :root: evita choques con la landing) */
+.clipr-dashboard-mockup-wrap {
+  --clipr-mock-bg-primary: #060510;
+  --clipr-mock-bg-tertiary: #120f1c;
+  --clipr-mock-text-primary: #ffffff;
+  --clipr-mock-text-tertiary: #6b6b7b;
+  --clipr-mock-purple-light: #a78bfa;
+  --clipr-mock-purple-glow: rgba(124, 58, 237, 0.35);
+  --clipr-mock-border-color: rgba(255, 255, 255, 0.06);
+  --clipr-mock-border-neon: rgba(124, 58, 237, 0.4);
+  --clipr-mock-border-purple: rgba(124, 58, 237, 0.45);
+  --clipr-mock-bg-glass: rgba(20, 16, 28, 0.6);
+  --clipr-mock-purple-gradient: linear-gradient(135deg, #7c3aed 0%, #00e5ff 100%);
+  --clipr-mock-radius-sm: 8px;
+  --clipr-mock-radius-md: 12px;
+  --clipr-mock-radius-lg: 16px;
+  --clipr-mock-radius-xl: 20px;
+  --clipr-mock-transition: all 0.25s ease;
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 12px 0 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.clipr-hero-visual {
+  position: relative;
+}
+
+.clipr-hero-mockup {
+  background: linear-gradient(145deg, rgba(22, 18, 31, 0.9) 0%, rgba(12, 10, 20, 0.95) 100%);
+  border: 1px solid var(--clipr-mock-border-neon);
+  border-radius: var(--clipr-mock-radius-xl);
+  overflow: hidden;
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.5),
+    0 0 60px var(--clipr-mock-purple-glow),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: var(--clipr-mock-transition);
+}
+
+.clipr-hero-mockup:hover {
+  border-color: var(--clipr-mock-border-purple);
+  box-shadow:
+    0 48px 96px rgba(0, 0, 0, 0.5),
+    0 0 80px var(--clipr-mock-purple-glow),
+    0 0 0 1px rgba(0, 229, 255, 0.1);
+}
+
+.clipr-mockup-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--clipr-mock-bg-tertiary);
+  border-bottom: 1px solid var(--clipr-mock-border-color);
+}
+
+.clipr-mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+.clipr-mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.clipr-mockup-dots span:first-child {
+  background: #ef4444;
+}
+.clipr-mockup-dots span:nth-child(2) {
+  background: #eab308;
+}
+.clipr-mockup-dots span:nth-child(3) {
+  background: #22c55e;
+}
+
+.clipr-mockup-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+  min-width: 0;
+}
+
+.clipr-mockup-logo {
+  display: block;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  object-fit: cover;
+  box-shadow: 0 0 14px rgba(124, 58, 237, 0.35);
+}
+
+.clipr-mockup-wordmark {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  color: #ffffff;
+}
+
+.clipr-mockup-content {
+  display: flex;
+  min-height: 280px;
+}
+
+.clipr-mockup-sidebar {
+  width: 56px;
+  background: var(--clipr-mock-bg-tertiary);
+  border-right: 1px solid var(--clipr-mock-border-color);
+  padding: 14px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.clipr-sidebar-item {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--clipr-mock-radius-sm);
+  color: var(--clipr-mock-text-tertiary);
+  font-size: 14px;
+  cursor: default;
+}
+
+.clipr-sidebar-item.active {
+  background: var(--clipr-mock-purple-gradient);
+  color: white;
+}
+
+.clipr-mockup-main {
+  flex: 1;
+  padding: 16px;
+  min-width: 0;
+}
+
+.clipr-mockup-stat-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.clipr-mini-stat {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--clipr-mock-border-color);
+  border-radius: var(--clipr-mock-radius-md);
+}
+
+.clipr-mini-stat-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(124, 58, 237, 0.15);
+  border-radius: var(--clipr-mock-radius-sm);
+  color: var(--clipr-mock-purple-light);
+  font-size: 12px;
+  box-shadow: 0 0 16px rgba(124, 58, 237, 0.2);
+  flex-shrink: 0;
+}
+
+.clipr-mini-stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.clipr-mini-stat-value {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--clipr-mock-text-primary);
+}
+
+.clipr-mini-stat-label {
+  font-size: 10px;
+  color: var(--clipr-mock-text-tertiary);
+  line-height: 1.3;
+}
+
+.clipr-mockup-clips {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clipr-clip-card {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--clipr-mock-border-color);
+  border-radius: var(--clipr-mock-radius-md);
+}
+
+.clipr-clip-thumb {
+  width: 70px;
+  height: 44px;
+  border-radius: var(--clipr-mock-radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.clipr-clip-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.clipr-clip-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--clipr-mock-text-primary);
+}
+
+.clipr-clip-meta {
+  font-size: 10px;
+  color: var(--clipr-mock-text-tertiary);
+}
+
+/* Floating cards */
+.clipr-floating-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--clipr-mock-bg-glass);
+  border: 1px solid var(--clipr-mock-border-neon);
+  border-radius: var(--clipr-mock-radius-lg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 24px var(--clipr-mock-purple-glow);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  animation: clipr-mockup-float 5s ease-in-out infinite;
+  transition: var(--clipr-mock-transition);
+  z-index: 2;
+}
+
+.clipr-floating-card:hover {
+  border-color: var(--clipr-mock-border-purple);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45), 0 0 36px var(--clipr-mock-purple-glow);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.clipr-floating-card--1 {
+  top: 12%;
+  right: -8px;
+  animation-delay: 0s;
+}
+.clipr-floating-card--2 {
+  bottom: 28%;
+  left: -24px;
+  animation-delay: 1.5s;
+}
+.clipr-floating-card--3 {
+  bottom: 6%;
+  right: 12%;
+  animation-delay: 3s;
+}
+
+.clipr-floating-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--clipr-mock-radius-sm);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.clipr-floating-icon.tiktok {
+  background: #000;
+  color: #fff;
+}
+.clipr-floating-icon.instagram {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: #fff;
+}
+.clipr-floating-icon.youtube {
+  background: #ff0000;
+  color: #fff;
+}
+
+.clipr-floating-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--clipr-mock-text-primary);
+}
+
+.clipr-floating-check {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--clipr-mock-purple-gradient);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  box-shadow: 0 0 12px var(--clipr-mock-purple-glow);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .clipr-dashboard-mockup-wrap {
+    padding: 16px 12px 24px;
+  }
+  .clipr-floating-card--1,
+  .clipr-floating-card--2,
+  .clipr-floating-card--3 {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin-top: 12px;
+    animation: none;
+  }
+  .clipr-hero-visual {
+    display: flex;
+    flex-direction: column;
+  }
+}

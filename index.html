@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Clipr — convierte tus streams en clips virales en minutos. Clips verticales 9:16 listos para publicar, sin perder horas editando."
+    />
+    <title>Clipr</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+    <meta name="theme-color" content="#0A0B16" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/landing.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="sources/portable/clipr-dashboard-mockup.css" />
+  </head>
+  <body>
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="site-logo" href="/" aria-label="Clipr — inicio">
+          <img
+            class="site-logo__img"
+            src="favicon.svg"
+            width="40"
+            height="40"
+            alt=""
+            decoding="async"
+          />
+          <span class="site-logo__text">clipr</span>
+        </a>
+
+        <button
+          type="button"
+          class="site-header__menu-toggle"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Abrir menú de navegación"
+        >
+          <span class="site-header__menu-bar" aria-hidden="true"></span>
+          <span class="site-header__menu-bar" aria-hidden="true"></span>
+          <span class="site-header__menu-bar" aria-hidden="true"></span>
+        </button>
+
+        <div class="site-header__nav-wrap" data-nav-wrap>
+          <nav class="site-nav" id="site-nav" aria-label="Principal">
+            <ul class="site-nav__list">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#como-funciona">¿Cómo funciona?</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#precios">Precios</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#contacto">Contáctanos</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="site-header__actions">
+            <a class="site-header__login" href="#login">Iniciar sesión</a>
+            <div
+              class="lang-switch lang-switch--header"
+              data-lang-switch
+              role="group"
+              aria-labelledby="lang-switch-label"
+            >
+              <span class="visually-hidden" id="lang-switch-label"
+                >Idioma / Language</span>
+              <div class="lang-switch__track">
+                <span class="lang-switch__thumb" data-lang-thumb aria-hidden="true"></span>
+                <button
+                  type="button"
+                  class="lang-switch__btn"
+                  data-lang-value="es"
+                  aria-pressed="true"
+                  aria-label="Español"
+                >
+                  ES
+                </button>
+                <button
+                  type="button"
+                  class="lang-switch__btn"
+                  data-lang-value="en"
+                  aria-pressed="false"
+                  aria-label="English"
+                >
+                  EN
+                </button>
+              </div>
+            </div>
+            <a class="site-header__cta" href="#empieza">¡Comienza Gratis!</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div
+          class="hero__carousel"
+          data-hero-carousel-root
+          hidden
+          aria-hidden="true"
+        >
+          <div class="hero-carousel__drag" data-hero-drag>
+            <div class="hero-carousel__spin" data-hero-spin></div>
+            <div class="hero-carousel__ground" data-hero-ground></div>
+          </div>
+        </div>
+        <div class="hero__veil" aria-hidden="true"></div>
+        <div class="hero__content">
+          <h1 id="hero-title" class="hero__title">
+            <span class="hero__title-line">Convierte tus streams en</span>
+            <span class="hero__title-line hero__title-line--hero">
+              <span class="hero__title-accent">clips virales</span><span class="hero__title-tail"> en minutos</span>
+            </span>
+          </h1>
+          <p class="hero__lede">
+            Sube tu stream o VOD.
+            <strong class="hero__lede-highlight"
+              >Clipr detecta los mejores momentos, los convierte en clip verticales 9:16 y los deja listo para publicar</strong>
+            en redes, sin perder horas editando.
+          </p>
+          <div class="hero__actions">
+            <a class="hero__cta hero__cta--primary" href="#empieza"
+              >¡Comienza Gratis!</a
+            >
+            <a class="hero__cta hero__cta--ghost" href="#demo"
+              >Ver demo en acción</a
+            >
+          </div>
+          <p class="hero__micro">
+            Sin tarjeta · Ahorra horas de edición · Publica más contenido
+          </p>
+        </div>
+
+        <div class="hero__mockup" data-hero-mockup-root aria-hidden="true">
+            <div class="clipr-dashboard-mockup-wrap">
+            <div class="clipr-hero-visual" data-hero-parallax>
+              <div class="clipr-hero-mockup">
+                <div class="clipr-mockup-header">
+                  <div class="clipr-mockup-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="clipr-mockup-title">
+                    <img
+                      class="clipr-mockup-logo"
+                      src="favicon.svg"
+                      width="26"
+                      height="26"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="clipr-mockup-wordmark">Clipr</span>
+                  </div>
+                </div>
+                <div class="clipr-mockup-content">
+                  <div class="clipr-mockup-sidebar">
+                    <div class="clipr-sidebar-item active" aria-hidden="true">
+                      <i class="fas fa-home"></i>
+                    </div>
+                    <div class="clipr-sidebar-item" aria-hidden="true">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="clipr-sidebar-item" aria-hidden="true">
+                      <i class="fas fa-scissors"></i>
+                    </div>
+                    <div class="clipr-sidebar-item" aria-hidden="true">
+                      <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="clipr-sidebar-item" aria-hidden="true">
+                      <i class="fas fa-chart-bar"></i>
+                    </div>
+                  </div>
+                  <div class="clipr-mockup-main">
+                    <div class="clipr-mockup-stat-row">
+                      <div class="clipr-mini-stat">
+                        <div class="clipr-mini-stat-icon">
+                          <i class="fas fa-eye" aria-hidden="true"></i>
+                        </div>
+                        <div class="clipr-mini-stat-info">
+                          <span class="clipr-mini-stat-value">2.4M</span>
+                          <span class="clipr-mini-stat-label">Total plays</span>
+                        </div>
+                      </div>
+                      <div class="clipr-mini-stat">
+                        <div class="clipr-mini-stat-icon">
+                          <i class="fas fa-film" aria-hidden="true"></i>
+                        </div>
+                        <div class="clipr-mini-stat-info">
+                          <span class="clipr-mini-stat-value">847</span>
+                          <span class="clipr-mini-stat-label">Clips cut</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clipr-mockup-clips">
+                      <div class="clipr-clip-card">
+                        <img
+                          src="sources/clip1.png"
+                          alt=""
+                          class="clipr-clip-thumb"
+                          loading="lazy"
+                          width="200"
+                          height="126"
+                        />
+                        <div class="clipr-clip-info">
+                          <div class="clipr-clip-title">Ace + spray transfer — ranked</div>
+                          <div class="clipr-clip-meta">Highlight · 2.3K plays</div>
+                        </div>
+                      </div>
+                      <div class="clipr-clip-card">
+                        <img
+                          src="sources/clip2.png"
+                          alt=""
+                          class="clipr-clip-thumb"
+                          loading="lazy"
+                          width="200"
+                          height="126"
+                        />
+                        <div class="clipr-clip-info">
+                          <div class="clipr-clip-title">Facecam tilt → insane comeback</div>
+                          <div class="clipr-clip-meta">9:16 clip · 5.1K</div>
+                        </div>
+                      </div>
+                      <div class="clipr-clip-card">
+                        <img
+                          src="sources/clip3.png"
+                          alt=""
+                          class="clipr-clip-thumb"
+                          loading="lazy"
+                          width="200"
+                          height="126"
+                        />
+                        <div class="clipr-clip-info">
+                          <div class="clipr-clip-title">1v4 clutch — OT steal</div>
+                          <div class="clipr-clip-meta">Shorts viral · 8.7K</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="clipr-floating-card clipr-floating-card--1">
+                <div class="clipr-floating-icon tiktok">
+                  <i class="fab fa-tiktok" aria-hidden="true"></i>
+                </div>
+                <div class="clipr-floating-text">Live on TikTok FYP</div>
+                <div class="clipr-floating-check">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="clipr-floating-card clipr-floating-card--2">
+                <div class="clipr-floating-icon instagram">
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                </div>
+                <div class="clipr-floating-text">+12.4K in 24h</div>
+              </div>
+              <div class="clipr-floating-card clipr-floating-card--3">
+                <div class="clipr-floating-icon youtube">
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                </div>
+                <div class="clipr-floating-text">Export 9:16 · ready</div>
+              </div>
+            </div>
+            </div>
+        </div>
+      </section>
+
+      <section
+        class="platform-bridge"
+        id="plataformas"
+        aria-labelledby="platform-bridge-title"
+      >
+        <div class="platform-bridge__ambient" aria-hidden="true"></div>
+        <div class="platform-bridge__grid" aria-hidden="true"></div>
+        <div class="platform-bridge__noise" aria-hidden="true"></div>
+
+        <div class="platform-bridge__inner">
+          <div class="platform-bridge__copy">
+            <p class="platform-bridge__eyebrow">Plataformas compatibles</p>
+            <h2 id="platform-bridge-title" class="platform-bridge__title">
+              Sube tu stream.
+              <span class="platform-bridge__title-highlight"
+                >Clipr lo convierte en clips</span>
+              listos para publicar.
+            </h2>
+            <p class="platform-bridge__lede">
+              Conecta tus streams de Twitch o YouTube y deja que Clipr los
+              transforme en clips listos para TikTok, Reels y Shorts.
+            </p>
+          </div>
+
+          <div class="platform-bridge__stage">
+            <div class="platform-bridge__flow">
+              <div class="platform-bridge__group platform-bridge__group--sources">
+                <span class="platform-bridge__hint">Origen</span>
+                <div class="platform-bridge__chips" role="list">
+                  <div
+                    class="platform-chip platform-chip--twitch platform-chip--origin"
+                    role="listitem"
+                  >
+                    <span class="platform-chip__icon" aria-hidden="true">
+                      <i class="fab fa-twitch"></i>
+                    </span>
+                    <span class="platform-chip__label platform-chip__label--simple"
+                      >Twitch</span>
+                  </div>
+                  <div
+                    class="platform-chip platform-chip--youtube platform-chip--origin"
+                    role="listitem"
+                  >
+                    <span class="platform-chip__icon" aria-hidden="true">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span class="platform-chip__label platform-chip__label--simple"
+                      >YouTube</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="platform-bridge__connector" aria-hidden="true">
+                <span class="platform-bridge__connector-line"></span>
+                <span class="platform-bridge__connector-cap">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+
+              <div class="platform-bridge__core-shell">
+                <span
+                  class="platform-bridge__core-halo"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="platform-bridge__core-ring"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="platform-bridge__core-ring platform-bridge__core-ring--outer"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="platform-bridge__core-spark platform-bridge__core-spark--1"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="platform-bridge__core-spark platform-bridge__core-spark--2"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="platform-bridge__core-spark platform-bridge__core-spark--3"
+                  aria-hidden="true"
+                ></span>
+
+                <div class="platform-bridge__core">
+                  <span class="visually-hidden"
+                    >Clipr AI en el centro: de stream a clips listos</span>
+                  <img
+                    class="platform-bridge__core-logo"
+                    src="favicon.svg"
+                    width="26"
+                    height="26"
+                    alt=""
+                    decoding="async"
+                    aria-hidden="true"
+                  />
+                  <span class="platform-bridge__core-name" aria-hidden="true"
+                    >Clipr</span>
+                  <span class="platform-bridge__core-ai" aria-hidden="true"
+                    >AI</span>
+                </div>
+              </div>
+
+              <div class="platform-bridge__connector" aria-hidden="true">
+                <span class="platform-bridge__connector-line"></span>
+                <span class="platform-bridge__connector-cap">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+
+              <div class="platform-bridge__group platform-bridge__group--outputs">
+                <span class="platform-bridge__hint">Salida</span>
+                <div class="platform-bridge__chips" role="list">
+                  <div
+                    class="platform-chip platform-chip--tiktok platform-chip--publish"
+                    role="listitem"
+                  >
+                    <span class="platform-chip__icon" aria-hidden="true">
+                      <i class="fab fa-tiktok"></i>
+                    </span>
+                    <span class="platform-chip__label platform-chip__label--simple"
+                      >TikTok</span>
+                  </div>
+                  <div
+                    class="platform-chip platform-chip--instagram platform-chip--publish"
+                    role="listitem"
+                  >
+                    <span class="platform-chip__icon" aria-hidden="true">
+                      <i class="fab fa-instagram"></i>
+                    </span>
+                    <span class="platform-chip__label">
+                      <span class="platform-chip__name">Reels</span>
+                      <span class="platform-chip__sublabel">Instagram</span>
+                    </span>
+                  </div>
+                  <div
+                    class="platform-chip platform-chip--shorts platform-chip--publish"
+                    role="listitem"
+                  >
+                    <span class="platform-chip__icon" aria-hidden="true">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span class="platform-chip__label">
+                      <span class="platform-chip__name">Shorts</span>
+                      <span class="platform-chip__sublabel">YouTube</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul
+            class="platform-bridge__badges"
+            aria-label="Detalles del flujo Clipr"
+          >
+            <li class="platform-bridge__badge">AI processing</li>
+            <li class="platform-bridge__badge">9:16 ready</li>
+            <li class="platform-bridge__badge">Auto-captioned</li>
+            <li class="platform-bridge__badge">Ready to post</li>
+          </ul>
+
+          <div class="platform-bridge__rail" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <div class="site-main" id="demo">
+        <p class="site-main__placeholder">
+          Contenido de la landing — próximos bloques.
+        </p>
+      </div>
+    </main>
+
+    <script type="module" src="js/navbar-entry.mjs"></script>
+    <script src="sources/portable/clipr-dashboard-mockup.js"></script>
+  </body>
+</html>
