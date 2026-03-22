@@ -1541,8 +1541,6 @@ button {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
     0 4px 20px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(12px) saturate(1.15);
-  -webkit-backdrop-filter: blur(12px) saturate(1.15);
   transition:
     border-color var(--transition),
     box-shadow var(--transition),
@@ -2298,8 +2296,6 @@ button {
     inset 0 -1px 0 rgba(0, 0, 0, 0.2),
     0 6px 32px rgba(0, 0, 0, 0.35),
     0 0 0 1px rgba(34, 211, 238, 0.08);
-  backdrop-filter: blur(14px) saturate(1.15);
-  -webkit-backdrop-filter: blur(14px) saturate(1.15);
   transition:
     border-color 0.35s ease,
     box-shadow 0.35s ease,
@@ -3233,8 +3229,6 @@ button {
     inset 0 -1px 0 rgba(0, 0, 0, 0.18),
     0 6px 28px rgba(0, 0, 0, 0.32),
     0 0 0 1px rgba(34, 211, 238, 0.06);
-  backdrop-filter: blur(14px) saturate(1.12);
-  -webkit-backdrop-filter: blur(14px) saturate(1.12);
   transition:
     border-color 0.32s ease,
     box-shadow 0.32s ease,
@@ -5417,8 +5411,8 @@ button {
     0 0 96px rgba(217, 70, 239, 0.3),
     0 16px 48px rgba(0, 0, 0, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(16px) saturate(1.3);
-  -webkit-backdrop-filter: blur(16px) saturate(1.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   transition:
     box-shadow 0.35s ease,
     border-color 0.35s ease,
@@ -5577,8 +5571,6 @@ button {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
     0 4px 20px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(12px) saturate(1.15);
-  -webkit-backdrop-filter: blur(12px) saturate(1.15);
   transition:
     border-color var(--transition),
     box-shadow var(--transition),
@@ -6106,8 +6098,8 @@ button {
     0 8px 40px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(34, 211, 238, 0.08),
     0 0 48px rgba(124, 58, 237, 0.12);
-  backdrop-filter: blur(16px) saturate(1.1);
-  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   transition:
     border-color 0.32s ease,
     box-shadow 0.32s ease;
@@ -7693,3 +7685,210 @@ button {
     text-align: center;
   }
 }
+
+ .text-gradient {
+  display: inline;
+  font-weight: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(34, 211, 238, 0.98) 0%,
+    rgba(232, 121, 249, 0.98) 55%,
+    rgba(244, 114, 182, 0.98) 100%
+  );
+  background-size: 140% 140%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.18)) drop-shadow(0 0 16px rgba(232, 121, 249, 0.16));
+ }
+
+ .feature-card--spotlight {
+  border-color: rgba(34, 211, 238, 0.26);
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.46) 0%,
+    rgba(34, 211, 238, 0.06) 22%,
+    rgba(124, 58, 237, 0.12) 52%,
+    rgba(10, 11, 22, 0.92) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 0 0 1px rgba(34, 211, 238, 0.12),
+    0 10px 42px rgba(0, 0, 0, 0.38),
+    0 0 72px rgba(34, 211, 238, 0.1);
+ }
+
+ .feature-card--spotlight .feature-card__title {
+  font-size: clamp(1.02rem, 1.45vw, 1.15rem);
+ }
+
+ .feature-card--support {
+  border-color: rgba(217, 70, 239, 0.14);
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.54) 0%,
+    rgba(10, 11, 22, 0.95) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 6px 26px rgba(0, 0, 0, 0.28);
+ }
+
+ .feature-card--support .feature-card__text {
+  color: rgba(178, 168, 205, 0.86);
+ }
+
+ /* Rediseño review cards en Results */
+ .results-case__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+ }
+
+ .results-case__avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+ }
+
+ .results-case__avatar--gaming {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.2) 0%, rgba(124, 58, 237, 0.3) 100%);
+  border: 1px solid rgba(34, 211, 238, 0.38);
+  color: rgba(34, 211, 238, 0.95);
+ }
+
+ .results-case__avatar--variety {
+  background: linear-gradient(135deg, rgba(232, 121, 249, 0.18) 0%, rgba(124, 58, 237, 0.28) 100%);
+  border: 1px solid rgba(232, 121, 249, 0.38);
+  color: rgba(232, 121, 249, 0.95);
+ }
+
+ .results-case__avatar--podcast {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.18) 0%, rgba(124, 58, 237, 0.28) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.38);
+  color: rgba(180, 180, 255, 0.95);
+ }
+
+ .results-case__badge {
+  margin-left: auto;
+  flex-shrink: 0;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+ }
+
+ .results-case__badge--gaming {
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.28);
+  color: rgba(34, 211, 238, 0.9);
+ }
+
+ .results-case__badge--variety {
+  background: rgba(232, 121, 249, 0.1);
+  border: 1px solid rgba(232, 121, 249, 0.28);
+  color: rgba(232, 121, 249, 0.9);
+ }
+
+ .results-case__badge--podcast {
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  color: rgba(180, 180, 255, 0.9);
+ }
+
+ .results-case .results-case__quote {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(210, 200, 235, 0.95);
+  margin-bottom: 16px;
+ }
+
+ .results-case .results-case__metric {
+  margin: 0;
+  padding: 5px 13px;
+  border-radius: var(--radius-pill);
+  background: rgba(34, 211, 238, 0.07);
+  border: 1px solid rgba(34, 211, 238, 0.18);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(34, 211, 238, 0.88);
+  align-self: flex-start;
+ }
+
+ .analytics-metric--hero {
+  grid-column: span 2;
+  border-color: rgba(232, 121, 249, 0.22);
+  background: linear-gradient(
+    165deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(124, 58, 237, 0.18) 55%,
+    rgba(12, 10, 22, 0.95) 100%
+  );
+ }
+
+ .analytics-insight--hero {
+  grid-column: 1 / -1;
+  border-color: rgba(34, 211, 238, 0.2);
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.46) 0%,
+    rgba(34, 211, 238, 0.04) 18%,
+    rgba(124, 58, 237, 0.16) 60%,
+    rgba(12, 10, 22, 0.95) 100%
+  );
+ }
+
+ .pricing-card--starter {
+  border-color: rgba(217, 70, 239, 0.16);
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.56) 0%,
+    rgba(12, 10, 22, 0.96) 100%
+  );
+ }
+
+ .pricing-card--studio {
+  border-color: rgba(34, 211, 238, 0.12);
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.48) 0%,
+    rgba(34, 211, 238, 0.03) 25%,
+    rgba(12, 10, 22, 0.96) 100%
+  );
+ }
+
+ .cta-final__panel {
+  padding: clamp(28px, 4.5vw, 40px) clamp(18px, 3vw, 32px);
+  border-radius: 20px;
+  border: 1px solid rgba(217, 70, 239, 0.22);
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.52) 0%,
+    rgba(34, 211, 238, 0.03) 18%,
+    rgba(124, 58, 237, 0.18) 60%,
+    rgba(12, 10, 22, 0.95) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 0 0 1px rgba(34, 211, 238, 0.08),
+    0 18px 70px rgba(0, 0, 0, 0.45),
+    0 0 100px rgba(124, 58, 237, 0.22);
+ }
+
+ @media (max-width: 900px) {
+  .analytics-metric--hero {
+    grid-column: 1 / -1;
+  }
+ }
