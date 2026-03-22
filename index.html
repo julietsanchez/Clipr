@@ -71,6 +71,7 @@
 
           <div class="site-header__actions">
             <a class="site-header__login" href="#login">Iniciar sesión</a>
+            <a class="site-header__cta" href="#empieza">¡Comienza Gratis!</a>
             <div
               class="lang-switch lang-switch--header"
               data-lang-switch
@@ -101,7 +102,6 @@
                 </button>
               </div>
             </div>
-            <a class="site-header__cta" href="#empieza">¡Comienza Gratis!</a>
           </div>
         </div>
       </div>
@@ -139,7 +139,7 @@
             <a class="hero__cta hero__cta--primary" href="#empieza"
               >¡Comienza Gratis!</a
             >
-            <a class="hero__cta hero__cta--ghost" href="#demo"
+            <a class="hero__cta hero__cta--ghost" href="#como-funciona"
               >Ver demo en acción</a
             >
           </div>
@@ -300,8 +300,9 @@
               listos para publicar.
             </h2>
             <p class="platform-bridge__lede">
-              Conecta tus streams de Twitch o YouTube y deja que Clipr los
-              transforme en clips listos para TikTok, Reels y Shorts.
+              Conecta tu VOD de Twitch o YouTube y deja que Clipr detecte los
+              mejores momentos, los recorte y los prepare para TikTok, Reels y
+              Shorts.
             </p>
           </div>
 
@@ -372,8 +373,8 @@
                   <img
                     class="platform-bridge__core-logo"
                     src="favicon.svg"
-                    width="26"
-                    height="26"
+                    width="28"
+                    height="28"
                     alt=""
                     decoding="async"
                     aria-hidden="true"
@@ -431,31 +432,1513 @@
                   </div>
                 </div>
               </div>
+
+              <ul
+                class="platform-bridge__badges"
+                aria-label="Detalles del flujo Clipr"
+              >
+                <li class="platform-bridge__badge">AI processing</li>
+                <li class="platform-bridge__badge">9:16 ready</li>
+                <li class="platform-bridge__badge">Auto-captioned</li>
+                <li class="platform-bridge__badge">Ready to post</li>
+              </ul>
             </div>
           </div>
-
-          <ul
-            class="platform-bridge__badges"
-            aria-label="Detalles del flujo Clipr"
-          >
-            <li class="platform-bridge__badge">AI processing</li>
-            <li class="platform-bridge__badge">9:16 ready</li>
-            <li class="platform-bridge__badge">Auto-captioned</li>
-            <li class="platform-bridge__badge">Ready to post</li>
-          </ul>
 
           <div class="platform-bridge__rail" aria-hidden="true"></div>
         </div>
       </section>
 
-      <div class="site-main" id="demo">
-        <p class="site-main__placeholder">
-          Contenido de la landing — próximos bloques.
-        </p>
-      </div>
+      <section
+        class="how-it-works"
+        id="como-funciona"
+        aria-labelledby="how-it-works-title"
+      >
+        <div class="how-it-works__ambient" aria-hidden="true"></div>
+        <div class="how-it-works__grid" aria-hidden="true"></div>
+        <div class="how-it-works__noise" aria-hidden="true"></div>
+
+        <div class="how-it-works__inner">
+          <header class="how-it-works__copy">
+            <p class="how-it-works__eyebrow">Cómo funciona</p>
+            <h2 id="how-it-works-title" class="how-it-works__title">
+              Convierte tus streams en clips en solo
+              <span class="how-it-works__title-accent">3 pasos</span>
+            </h2>
+            <p class="how-it-works__lede">
+              Sube tu VOD, deja que Clipr detecte los mejores momentos y obtén
+              clips listos para publicar sin editar todo a mano.
+            </p>
+          </header>
+
+          <div
+            class="how-it-works__flow"
+            aria-label="Tres pasos para crear clips con Clipr"
+          >
+            <article
+              class="how-step-card how-step-card--upload"
+              aria-labelledby="how-step-1-title"
+            >
+              <div class="how-step-card__top">
+                <span class="how-step-card__index" aria-hidden="true">01</span>
+                <div
+                  class="how-step-card__visual how-step-card__visual--upload"
+                  aria-hidden="true"
+                >
+                  <div class="how-step-mockup how-step-mockup--upload">
+                    <div class="how-step-mockup__header">
+                      <span class="how-step-mockup__label">Import VOD</span>
+                      <span class="how-step-mockup__chip how-step-mockup__chip--twitch">
+                        <i class="fab fa-twitch" aria-hidden="true"></i> Twitch
+                      </span>
+                    </div>
+                    <div class="how-step-mockup__body">
+                      <div class="how-step-mockup__thumb">
+                        <span class="how-step-mockup__play"></span>
+                      </div>
+                      <div class="how-step-mockup__progress-wrap">
+                        <span class="how-step-mockup__progress-fill" style="--progress: 100%"></span>
+                      </div>
+                    </div>
+                    <div class="how-step-mockup__overflow-badge how-step-mockup__overflow-badge--connected">
+                      VOD connected
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="how-step-card__title" id="how-step-1-title">
+                Sube tu stream o VOD
+              </h3>
+              <p class="how-step-card__text">
+                Carga tu contenido desde Twitch o YouTube y empieza en
+                segundos, sin procesos complicados.
+              </p>
+            </article>
+
+            <div class="how-it-works__connector" aria-hidden="true">
+              <span class="how-it-works__connector-line"></span>
+              <span class="how-it-works__connector-cap">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </div>
+
+            <article
+              class="how-step-card how-step-card--ai how-step-card--hero"
+              aria-labelledby="how-step-2-title"
+            >
+              <div class="how-step-card__top">
+                <span class="how-step-card__index" aria-hidden="true">02</span>
+                <div
+                  class="how-step-card__visual how-step-card__visual--ai"
+                  aria-hidden="true"
+                >
+                  <div class="how-step-mockup how-step-mockup--ai">
+                    <div class="how-step-mockup__ai-header">
+                      <span class="how-step-mockup__ai-badge">AI detected</span>
+                      <span class="how-step-mockup__916-badge">9:16</span>
+                    </div>
+                    <div class="how-step-mockup__timeline">
+                      <span class="how-step-mockup__rail"></span>
+                      <span class="how-step-mockup__peak how-step-mockup__peak--1"></span>
+                      <span class="how-step-mockup__peak how-step-mockup__peak--2"></span>
+                      <span class="how-step-mockup__peak how-step-mockup__peak--3"></span>
+                      <span class="how-step-mockup__peak how-step-mockup__peak--4"></span>
+                      <span class="how-step-mockup__marker how-step-mockup__marker--1"></span>
+                      <span class="how-step-mockup__marker how-step-mockup__marker--2"></span>
+                      <span class="how-step-mockup__marker how-step-mockup__marker--3"></span>
+                    </div>
+                    <div class="how-step-mockup__ai-badges">
+                      <span class="how-step-mockup__gen-badge">Clip generated</span>
+                      <span class="how-step-mockup__cap-badge">Auto-captioned</span>
+                    </div>
+                    <div class="how-step-mockup__overflow-badge how-step-mockup__overflow-badge--ai">
+                      <i class="fas fa-magic" aria-hidden="true"></i> AI
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="how-step-card__title" id="how-step-2-title">
+                La IA encuentra los mejores momentos
+              </h3>
+              <p class="how-step-card__text">
+                Clipr detecta highlights, reacciones y jugadas clave, los
+                recorta automáticamente y los adapta a formato vertical.
+              </p>
+            </article>
+
+            <div class="how-it-works__connector" aria-hidden="true">
+              <span class="how-it-works__connector-line"></span>
+              <span class="how-it-works__connector-cap">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </div>
+
+            <article
+              class="how-step-card how-step-card--publish"
+              aria-labelledby="how-step-3-title"
+            >
+              <div class="how-step-card__top">
+                <span class="how-step-card__index" aria-hidden="true">03</span>
+                <div
+                  class="how-step-card__visual how-step-card__visual--publish"
+                  aria-hidden="true"
+                >
+                  <div class="how-step-mockup how-step-mockup--publish">
+                    <div class="how-step-mockup__phone-frame">
+                      <span class="how-step-mockup__phone-screen"></span>
+                      <span class="how-step-mockup__phone-glow"></span>
+                    </div>
+                    <div class="how-step-mockup__export-chips">
+                      <span class="how-step-mockup__export-chip">
+                        <i class="fab fa-tiktok" aria-hidden="true"></i> TikTok
+                      </span>
+                      <span class="how-step-mockup__export-chip">
+                        <i class="fab fa-instagram" aria-hidden="true"></i> Reels
+                      </span>
+                      <span class="how-step-mockup__export-chip">
+                        <i class="fab fa-youtube" aria-hidden="true"></i> Shorts
+                      </span>
+                    </div>
+                    <div class="how-step-mockup__ready-badge">Ready to post</div>
+                    <div class="how-step-mockup__overflow-preview">
+                      <span class="how-step-mockup__mini-clip"></span>
+                      <span class="how-step-mockup__mini-views">2.4K</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="how-step-card__title" id="how-step-3-title">
+                Publica clips listos para crecer
+              </h3>
+              <p class="how-step-card__text">
+                Obtén clips preparados para TikTok, Reels y Shorts, con menos
+                edición manual y más velocidad de publicación.
+              </p>
+            </article>
+          </div>
+
+          <div class="how-it-works__progress" aria-hidden="true">
+            <span class="how-it-works__progress-fill"></span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="features"
+        id="capacidades"
+        aria-labelledby="features-title"
+      >
+        <div class="features__ambient" aria-hidden="true"></div>
+        <div class="features__grid" aria-hidden="true"></div>
+        <div class="features__noise" aria-hidden="true"></div>
+
+        <div class="features__inner">
+          <header class="features__copy">
+            <p class="features__eyebrow">Capacidades principales</p>
+            <h2 id="features-title" class="features__title">
+              Todo lo que <span class="hero__title-accent">Clipr</span> hace para convertir streams en <span class="hero__title-accent">clips que sí se publican</span>
+            </h2>
+            <p class="features__lede">
+              Desde detectar highlights hasta preparar clips listos para TikTok, Reels y Shorts, Clipr automatiza las partes que más tiempo te quitan.
+            </p>
+          </header>
+
+          <div class="features__layout" aria-label="Capacidades de Clipr">
+            <article
+              class="feature-card feature-card--hero"
+              aria-labelledby="feature-hero-title"
+            >
+              <div class="feature-card__visual feature-card__visual--hero">
+                <div class="feature-mockup feature-mockup--timeline">
+                  <div class="feature-mockup__header">
+                    <span class="feature-mockup__ai-badge">AI detected</span>
+                    <span class="feature-mockup__processing">Processing...</span>
+                  </div>
+                  <div class="feature-mockup__timeline-wrap">
+                    <span class="feature-mockup__rail"></span>
+                    <span class="feature-mockup__peak feature-mockup__peak--1"></span>
+                    <span class="feature-mockup__peak feature-mockup__peak--2"></span>
+                    <span class="feature-mockup__peak feature-mockup__peak--3"></span>
+                    <span class="feature-mockup__peak feature-mockup__peak--4"></span>
+                    <span class="feature-mockup__peak feature-mockup__peak--5"></span>
+                    <span class="feature-mockup__peak feature-mockup__peak--6"></span>
+                    <span class="feature-mockup__marker feature-mockup__marker--1"></span>
+                    <span class="feature-mockup__marker feature-mockup__marker--2"></span>
+                    <span class="feature-mockup__marker feature-mockup__marker--3"></span>
+                  </div>
+                  <div class="feature-mockup__preview-row">
+                    <div class="feature-mockup__mini-preview">
+                      <span class="feature-mockup__preview-thumb"></span>
+                      <span class="feature-mockup__preview-badge">Clip generated</span>
+                    </div>
+                    <div class="feature-mockup__glow-dot feature-mockup__glow-dot--1"></div>
+                    <div class="feature-mockup__glow-dot feature-mockup__glow-dot--2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="feature-card__content">
+                <h3 class="feature-card__title" id="feature-hero-title">
+                  Detección de highlights con IA
+                </h3>
+                <p class="feature-card__text">
+                  Clipr analiza tus streams y detecta jugadas, reacciones y momentos clave para convertirlos en clips sin revisar horas de contenido manualmente.
+                </p>
+              </div>
+            </article>
+
+            <article class="feature-card feature-card--secondary" aria-labelledby="feature-2-title">
+              <div class="feature-card__visual">
+                <div class="feature-mockup feature-mockup--captions">
+                  <div class="feature-mockup__vertical-frame">
+                    <span class="feature-mockup__caption-line"></span>
+                    <span class="feature-mockup__caption-line"></span>
+                    <span class="feature-mockup__caption-line feature-mockup__caption-line--active"></span>
+                  </div>
+                  <span class="feature-mockup__cap-badge">Auto-captioned</span>
+                </div>
+              </div>
+              <div class="feature-card__content">
+                <h3 class="feature-card__title" id="feature-2-title">
+                  Subtítulos automáticos
+                </h3>
+                <p class="feature-card__text">
+                  Genera subtítulos listos para clips verticales y haz que tus mejores momentos sean más claros, más dinámicos y más fáciles de consumir.
+                </p>
+              </div>
+            </article>
+
+            <article class="feature-card feature-card--secondary" aria-labelledby="feature-3-title">
+              <div class="feature-card__visual">
+                <div class="feature-mockup feature-mockup--crop">
+                  <div class="feature-mockup__crop-frame">
+                    <span class="feature-mockup__crop-guide feature-mockup__crop-guide--h"></span>
+                    <span class="feature-mockup__crop-guide feature-mockup__crop-guide--v"></span>
+                  </div>
+                  <span class="feature-mockup__916-badge">9:16 ready</span>
+                </div>
+              </div>
+              <div class="feature-card__content">
+                <h3 class="feature-card__title" id="feature-3-title">
+                  Recorte inteligente a 9:16
+                </h3>
+                <p class="feature-card__text">
+                  Adapta automáticamente el contenido a formato vertical para TikTok, Reels y Shorts sin editar encuadres a mano.
+                </p>
+              </div>
+            </article>
+
+            <article class="feature-card feature-card--secondary" aria-labelledby="feature-4-title">
+              <div class="feature-card__visual">
+                <div class="feature-mockup feature-mockup--export">
+                  <div class="feature-mockup__export-chips">
+                    <span class="feature-mockup__export-chip"><i class="fab fa-tiktok"></i></span>
+                    <span class="feature-mockup__export-chip"><i class="fab fa-instagram"></i></span>
+                    <span class="feature-mockup__export-chip"><i class="fab fa-youtube"></i></span>
+                  </div>
+                  <span class="feature-mockup__ready-badge">Ready to post</span>
+                </div>
+              </div>
+              <div class="feature-card__content">
+                <h3 class="feature-card__title" id="feature-4-title">
+                  Clips listos para publicar
+                </h3>
+                <p class="feature-card__text">
+                  Obtén resultados pensados para short-form content, con menos pasos manuales y más velocidad de publicación.
+                </p>
+              </div>
+            </article>
+
+            <article class="feature-card feature-card--secondary" aria-labelledby="feature-5-title">
+              <div class="feature-card__visual">
+                <div class="feature-mockup feature-mockup--speed">
+                  <div class="feature-mockup__speed-flow">
+                    <span class="feature-mockup__speed-step">Stream</span>
+                    <span class="feature-mockup__speed-arrow"><i class="fas fa-bolt"></i></span>
+                    <span class="feature-mockup__speed-step">Clips</span>
+                  </div>
+                  <span class="feature-mockup__time-badge">-85% tiempo</span>
+                </div>
+              </div>
+              <div class="feature-card__content">
+                <h3 class="feature-card__title" id="feature-5-title">
+                  Más velocidad, menos edición manual
+                </h3>
+                <p class="feature-card__text">
+                  Reduce el tiempo entre terminar un stream y tener clips listos para salir, para que publiques más sin depender de un flujo lento.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="features__rail" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section
+        class="compare"
+        id="manual-vs-clipr"
+        aria-labelledby="compare-title"
+      >
+        <div class="compare__ambient" aria-hidden="true"></div>
+        <div class="compare__grid" aria-hidden="true"></div>
+        <div class="compare__noise" aria-hidden="true"></div>
+
+        <div class="compare__inner">
+          <header class="compare__copy">
+            <p class="compare__eyebrow">Manual vs Clipr</p>
+            <h2 id="compare-title" class="compare__title">
+              La diferencia entre <span class="hero__title-accent">perder horas editando</span> y <span class="hero__title-accent">tener clips listos en minutos</span>
+            </h2>
+            <p class="compare__lede">
+              Clipr automatiza el trabajo repetitivo para que puedas publicar más rápido, sin revisar timelines eternos ni recortar cada clip a mano.
+            </p>
+          </header>
+
+          <div class="compare__split" aria-label="Comparación edición manual vs Clipr">
+            <div class="compare-panel compare-panel--manual" aria-labelledby="compare-manual-label">
+              <div class="compare-panel__header">
+                <span class="compare-panel__label" id="compare-manual-label">Edición manual</span>
+                <p class="compare-panel__intro">
+                  Un flujo lento, repetitivo y difícil de escalar.
+                </p>
+              </div>
+              <div class="compare-panel__visual compare-panel__visual--manual" aria-hidden="true">
+                <div class="compare-mockup compare-mockup--manual">
+                  <div class="compare-mockup__chaos-timeline">
+                    <span class="compare-mockup__chaos-rail"></span>
+                    <span class="compare-mockup__chaos-seg compare-mockup__chaos-seg--1"></span>
+                    <span class="compare-mockup__chaos-seg compare-mockup__chaos-seg--2"></span>
+                    <span class="compare-mockup__chaos-seg compare-mockup__chaos-seg--3"></span>
+                    <span class="compare-mockup__chaos-seg compare-mockup__chaos-seg--4"></span>
+                    <span class="compare-mockup__chaos-seg compare-mockup__chaos-seg--5"></span>
+                  </div>
+                  <div class="compare-mockup__manual-badges">
+                    <span class="compare-mockup__manual-badge">Crop manually</span>
+                    <span class="compare-mockup__manual-badge">Add captions</span>
+                    <span class="compare-mockup__manual-badge">Export one by one</span>
+                  </div>
+                  <div class="compare-mockup__wip">Work in progress</div>
+                </div>
+              </div>
+              <ul class="compare-panel__points" role="list">
+                <li class="compare-point compare-point--manual" role="listitem">
+                  <span class="compare-point__icon" aria-hidden="true"><i class="fas fa-clock"></i></span>
+                  <span>Revisar horas de stream para encontrar momentos útiles</span>
+                </li>
+                <li class="compare-point compare-point--manual" role="listitem">
+                  <span class="compare-point__icon" aria-hidden="true"><i class="fas fa-cut"></i></span>
+                  <span>Recortar clips uno por uno</span>
+                </li>
+                <li class="compare-point compare-point--manual" role="listitem">
+                  <span class="compare-point__icon" aria-hidden="true"><i class="fas fa-crop"></i></span>
+                  <span>Ajustar encuadres manualmente a 9:16</span>
+                </li>
+                <li class="compare-point compare-point--manual" role="listitem">
+                  <span class="compare-point__icon" aria-hidden="true"><i class="fas fa-font"></i></span>
+                  <span>Añadir subtítulos y detalles a mano</span>
+                </li>
+                <li class="compare-point compare-point--manual" role="listitem">
+                  <span class="compare-point__icon" aria-hidden="true"><i class="fas fa-hourglass-half"></i></span>
+                  <span>Perder tiempo antes de poder publicar</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="compare__vs" aria-hidden="true">
+              <span class="compare__vs-line"></span>
+              <span class="compare__vs-label">vs</span>
+              <span class="compare__vs-line"></span>
+            </div>
+
+            <div class="compare-panel compare-panel--clipr" aria-labelledby="compare-clipr-label">
+              <div class="compare-panel__header">
+                <span class="compare-panel__label compare-panel__label--clipr" id="compare-clipr-label">
+                  <img src="favicon.svg" width="20" height="20" alt="" decoding="async" aria-hidden="true" />
+                  Con Clipr
+                </span>
+                <p class="compare-panel__intro compare-panel__intro--clipr">
+                  Un flujo optimizado para creadores que quieren publicar más sin fricción.
+                </p>
+              </div>
+              <div class="compare-panel__visual compare-panel__visual--clipr" aria-hidden="true">
+                <div class="compare-mockup compare-mockup--clipr">
+                  <div class="compare-mockup__clipr-header">
+                    <span class="compare-mockup__ai-chip">AI processing</span>
+                    <span class="compare-mockup__916-chip">9:16 ready</span>
+                  </div>
+                  <div class="compare-mockup__clipr-timeline">
+                    <span class="compare-mockup__clipr-rail"></span>
+                    <span class="compare-mockup__clipr-peak compare-mockup__clipr-peak--1"></span>
+                    <span class="compare-mockup__clipr-peak compare-mockup__clipr-peak--2"></span>
+                    <span class="compare-mockup__clipr-peak compare-mockup__clipr-peak--3"></span>
+                    <span class="compare-mockup__clipr-marker compare-mockup__clipr-marker--1"></span>
+                    <span class="compare-mockup__clipr-marker compare-mockup__clipr-marker--2"></span>
+                  </div>
+                  <div class="compare-mockup__clipr-export">
+                    <span class="compare-mockup__export-item"><i class="fab fa-tiktok"></i></span>
+                    <span class="compare-mockup__export-item"><i class="fab fa-instagram"></i></span>
+                    <span class="compare-mockup__export-item"><i class="fab fa-youtube"></i></span>
+                    <span class="compare-mockup__ready-chip">Ready to post</span>
+                  </div>
+                  <div class="compare-mockup__clipr-glow" aria-hidden="true"></div>
+                </div>
+              </div>
+              <ul class="compare-panel__points" role="list">
+                <li class="compare-point compare-point--clipr" role="listitem">
+                  <span class="compare-point__icon compare-point__icon--check" aria-hidden="true"><i class="fas fa-check"></i></span>
+                  <span>La IA detecta highlights automáticamente</span>
+                </li>
+                <li class="compare-point compare-point--clipr" role="listitem">
+                  <span class="compare-point__icon compare-point__icon--check" aria-hidden="true"><i class="fas fa-check"></i></span>
+                  <span>Los clips se adaptan a formato vertical</span>
+                </li>
+                <li class="compare-point compare-point--clipr" role="listitem">
+                  <span class="compare-point__icon compare-point__icon--check" aria-hidden="true"><i class="fas fa-check"></i></span>
+                  <span>Subtítulos y estructura listos para short-form</span>
+                </li>
+                <li class="compare-point compare-point--clipr" role="listitem">
+                  <span class="compare-point__icon compare-point__icon--check" aria-hidden="true"><i class="fas fa-check"></i></span>
+                  <span>Menos edición manual y más velocidad</span>
+                </li>
+                <li class="compare-point compare-point--clipr" role="listitem">
+                  <span class="compare-point__icon compare-point__icon--check" aria-hidden="true"><i class="fas fa-check"></i></span>
+                  <span>Clips listos para TikTok, Reels y Shorts</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="compare__rail" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section
+        class="results"
+        id="resultados"
+        aria-labelledby="results-title"
+      >
+        <div class="results__ambient" aria-hidden="true"></div>
+        <div class="results__grid" aria-hidden="true"></div>
+        <div class="results__noise" aria-hidden="true"></div>
+
+        <div class="results__inner">
+          <header class="results__copy">
+            <p class="results__eyebrow">Resultados reales</p>
+            <h2 id="results-title" class="results__title">
+              Creadores que <span class="hero__title-accent">publican más</span>, más rápido y con menos fricción
+            </h2>
+            <p class="results__lede">
+              Desde clips listos para TikTok hasta más velocidad entre un stream
+              y el siguiente contenido publicado, Clipr ayuda a transformar horas
+              de material en resultados que sí se mueven.
+            </p>
+          </header>
+
+          <div class="results__stats" aria-label="Métricas de Clipr">
+            <div class="results-stat">
+              <span class="results-stat__value">50.000+</span>
+              <span class="results-stat__label">creadores usando Clipr</span>
+            </div>
+            <div class="results-stat">
+              <span class="results-stat__value">Miles</span>
+              <span class="results-stat__label">de clips generados cada semana</span>
+            </div>
+            <div class="results-stat">
+              <span class="results-stat__value">Menos tiempo</span>
+              <span class="results-stat__label">entre stream y publicación</span>
+            </div>
+            <div class="results-stat">
+              <span class="results-stat__value">+ consistencia</span>
+              <span class="results-stat__label">en TikTok, Reels y Shorts</span>
+            </div>
+          </div>
+
+          <div class="results__cases" aria-label="Casos de creadores">
+            <article class="results-case results-case--gaming" aria-labelledby="case-alex">
+              <h3 id="case-alex" class="visually-hidden">Alex, streamer FPS — Publica clips el mismo día del stream</h3>
+              <div class="results-case__visual">
+                <div class="results-case-mockup results-case-mockup--gaming">
+                  <div class="results-case-mockup__frame">
+                    <img
+                      src="sources/clip1.png"
+                      alt=""
+                      class="results-case-mockup__thumb"
+                      loading="lazy"
+                      width="108"
+                      height="192"
+                    />
+                    <span class="results-case-mockup__badge results-case-mockup__badge--gaming">Gaming highlights</span>
+                    <span class="results-case-mockup__chip">Ready to post</span>
+                  </div>
+                </div>
+              </div>
+              <div class="results-case__content">
+                <div class="results-case__meta">
+                  <span class="results-case__name">Alex</span>
+                  <span class="results-case__type">Streamer FPS</span>
+                </div>
+                <p class="results-case__metric">Publica clips el mismo día del stream</p>
+                <blockquote class="results-case__quote">
+                  &ldquo;Antes perdía horas buscando momentos. Ahora termino un
+                  stream y ya tengo clips listos para TikTok.&rdquo;
+                </blockquote>
+              </div>
+            </article>
+
+            <article class="results-case results-case--variety" aria-labelledby="case-nina">
+              <h3 id="case-nina" class="visually-hidden">Nina, variety streamer — Más consistencia en Reels y Shorts</h3>
+              <div class="results-case__visual">
+                <div class="results-case-mockup results-case-mockup--variety">
+                  <div class="results-case-mockup__frame">
+                    <img
+                      src="sources/clip2.png"
+                      alt=""
+                      class="results-case-mockup__thumb"
+                      loading="lazy"
+                      width="108"
+                      height="192"
+                    />
+                    <span class="results-case-mockup__badge results-case-mockup__badge--captions">Auto-captioned</span>
+                    <span class="results-case-mockup__chip">9:16</span>
+                  </div>
+                </div>
+              </div>
+              <div class="results-case__content">
+                <div class="results-case__meta">
+                  <span class="results-case__name">Nina</span>
+                  <span class="results-case__type">Variety streamer</span>
+                </div>
+                <p class="results-case__metric">Más consistencia en Reels y Shorts</p>
+                <blockquote class="results-case__quote">
+                  &ldquo;Clipr me ayuda a sacar contenido de momentos que antes
+                  quedaban perdidos en streams largos.&rdquo;
+                </blockquote>
+              </div>
+            </article>
+
+            <article class="results-case results-case--podcast" aria-labelledby="case-leo">
+              <h3 id="case-leo" class="visually-hidden">Leo, podcast creator — Más velocidad entre grabar y publicar clips</h3>
+              <div class="results-case__visual">
+                <div class="results-case-mockup results-case-mockup--podcast">
+                  <div class="results-case-mockup__frame results-case-mockup__frame--waveform">
+                    <div class="results-case-mockup__waveform" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="results-case-mockup__platforms">
+                      <i class="fab fa-tiktok" aria-hidden="true"></i>
+                      <i class="fab fa-youtube" aria-hidden="true"></i>
+                      <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <span class="results-case-mockup__chip">TikTok · Shorts · Reels</span>
+                  </div>
+                </div>
+              </div>
+              <div class="results-case__content">
+                <div class="results-case__meta">
+                  <span class="results-case__name">Leo</span>
+                  <span class="results-case__type">Podcast creator</span>
+                </div>
+                <p class="results-case__metric">Más velocidad entre grabar y publicar clips</p>
+                <blockquote class="results-case__quote">
+                  &ldquo;Pasé de recortar clips manualmente a tener piezas listas
+                  mucho más rápido para todas las plataformas.&rdquo;
+                </blockquote>
+              </div>
+            </article>
+          </div>
+
+          <div class="results__cta-wrap">
+            <p class="results__cta-text">
+              Clipr convierte tiempo perdido en clips listos, publicaciones más
+              rápidas y más consistencia en redes.
+            </p>
+          </div>
+
+          <div class="results__rail" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section
+        class="integrations"
+        id="integraciones"
+        aria-labelledby="integrations-title"
+      >
+        <div class="integrations__ambient" aria-hidden="true"></div>
+        <div class="integrations__grid" aria-hidden="true"></div>
+        <div class="integrations__noise" aria-hidden="true"></div>
+
+        <div class="integrations__inner">
+          <header class="integrations__copy">
+            <p class="integrations__eyebrow">Integraciones</p>
+            <h2 id="integrations-title" class="integrations__title">
+              Clipr <span class="hero__title-accent">encaja</span> en el flujo de contenido que ya usas
+            </h2>
+            <p class="integrations__lede">
+              Conecta tus streams, deja que la IA encuentre los mejores momentos
+              y lleva tus clips listos a las plataformas donde realmente creces.
+            </p>
+          </header>
+
+          <div class="integrations__stage" aria-label="Flujo de integración Clipr">
+            <div class="integrations__flow">
+              <div class="integrations__group integrations__group--sources">
+                <span class="integrations__hint">Fuentes de contenido</span>
+                <div class="integrations__chips" role="list">
+                  <div
+                    class="integration-chip integration-chip--source"
+                    role="listitem"
+                  >
+                    <span class="integration-chip__icon" aria-hidden="true">
+                      <i class="fab fa-twitch"></i>
+                    </span>
+                    <span class="integration-chip__label">Twitch</span>
+                  </div>
+                  <div
+                    class="integration-chip integration-chip--source"
+                    role="listitem"
+                  >
+                    <span class="integration-chip__icon" aria-hidden="true">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span class="integration-chip__label">YouTube</span>
+                  </div>
+                  <div
+                    class="integration-chip integration-chip--source"
+                    role="listitem"
+                  >
+                    <span class="integration-chip__icon" aria-hidden="true">
+                      <i class="fas fa-cloud-upload-alt"></i>
+                    </span>
+                    <span class="integration-chip__label">VOD uploads</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="integrations__connector" aria-hidden="true">
+                <span class="integrations__connector-line"></span>
+                <span class="integrations__connector-cap">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+
+              <div class="integrations__core-wrap">
+                <span class="integrations__core-hint">Procesamiento con IA</span>
+                <span class="integrations__core-halo" aria-hidden="true"></span>
+                <span class="integrations__core-ring" aria-hidden="true"></span>
+                <span
+                  class="integrations__core-ring integrations__core-ring--outer"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="integrations__core-spark integrations__core-spark--1"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="integrations__core-spark integrations__core-spark--2"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="integrations__core-spark integrations__core-spark--3"
+                  aria-hidden="true"
+                ></span>
+
+                <div class="integrations__core">
+                  <span class="visually-hidden"
+                    >Clipr AI — núcleo de procesamiento</span>
+                  <img
+                    class="integrations__core-logo"
+                    src="favicon.svg"
+                    width="32"
+                    height="32"
+                    alt=""
+                    decoding="async"
+                    aria-hidden="true"
+                  />
+                  <div class="integrations__core-text">
+                    <span class="integrations__core-name" aria-hidden="true"
+                      >Clipr</span>
+                    <span class="integrations__core-ai" aria-hidden="true"
+                      >AI</span>
+                  </div>
+                  <div class="integrations__core-processing" aria-hidden="true">
+                    <span class="integrations__core-dot"></span>
+                    <span class="integrations__core-dot"></span>
+                    <span class="integrations__core-dot"></span>
+                  </div>
+                </div>
+
+                <div class="integrations__processing-badges" role="list">
+                  <span class="integrations__processing-badge" role="listitem"
+                    >Highlight detected</span>
+                  <span class="integrations__processing-badge" role="listitem"
+                    >Auto-captioned</span>
+                  <span class="integrations__processing-badge" role="listitem"
+                    >9:16 ready</span>
+                  <span class="integrations__processing-badge" role="listitem"
+                    >Clip generated</span>
+                </div>
+              </div>
+
+              <div class="integrations__connector" aria-hidden="true">
+                <span class="integrations__connector-line"></span>
+                <span class="integrations__connector-cap">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+              </div>
+
+              <div class="integrations__group integrations__group--destinations">
+                <span class="integrations__hint">Listo para publicar</span>
+                <div class="integrations__chips" role="list">
+                  <div
+                    class="integration-chip integration-chip--destination"
+                    role="listitem"
+                  >
+                    <span class="integration-chip__icon" aria-hidden="true">
+                      <i class="fab fa-tiktok"></i>
+                    </span>
+                    <span class="integration-chip__label">TikTok</span>
+                    <span class="integration-chip__badge">Ready to post</span>
+                  </div>
+                  <div
+                    class="integration-chip integration-chip--destination"
+                    role="listitem"
+                  >
+                    <span class="integration-chip__icon" aria-hidden="true">
+                      <i class="fab fa-instagram"></i>
+                    </span>
+                    <span class="integration-chip__label"
+                      ><span class="integration-chip__name">Reels</span
+                      ><span class="integration-chip__sublabel">Instagram</span
+                    ></span>
+                    <span class="integration-chip__badge">9:16</span>
+                  </div>
+                  <div
+                    class="integration-chip integration-chip--destination"
+                    role="listitem"
+                  >
+                    <span class="integration-chip__icon" aria-hidden="true">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span class="integration-chip__label"
+                      ><span class="integration-chip__name">Shorts</span
+                      ><span class="integration-chip__sublabel">YouTube</span
+                    ></span>
+                    <span class="integration-chip__badge">Ready to post</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="integrations__rail" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section
+        class="analytics"
+        id="analitica"
+        aria-labelledby="analytics-title"
+      >
+        <div class="analytics__ambient" aria-hidden="true"></div>
+        <div class="analytics__grid" aria-hidden="true"></div>
+        <div class="analytics__noise" aria-hidden="true"></div>
+
+        <div class="analytics__inner">
+          <header class="analytics__copy">
+            <p class="analytics__eyebrow">Analítica</p>
+            <h2 id="analytics-title" class="analytics__title">
+              Entiende qué clips <span class="hero__title-accent">funcionan mejor</span> y <span class="hero__title-accent">ajusta tu contenido más rápido</span>
+            </h2>
+            <p class="analytics__lede">
+              Clipr te da visibilidad sobre el rendimiento de tus clips para que
+              puedas detectar qué formatos, momentos y publicaciones generan más
+              alcance.
+            </p>
+          </header>
+
+          <div class="analytics__panel-wrap">
+            <div class="analytics-panel" aria-hidden="true">
+              <div class="analytics-panel__header">
+                <div class="analytics-panel__title-row">
+                  <img
+                    class="analytics-panel__logo"
+                    src="favicon.svg"
+                    width="22"
+                    height="22"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="analytics-panel__label">Clip performance</span>
+                </div>
+                <div class="analytics-panel__tabs">
+                  <span class="analytics-panel__tab analytics-panel__tab--active"
+                    >Last 7 days</span>
+                  <span class="analytics-panel__tab">Last 30 days</span>
+                </div>
+              </div>
+
+              <div class="analytics-panel__metrics">
+                <div class="analytics-metric">
+                  <span class="analytics-metric__value">2.4M</span>
+                  <span class="analytics-metric__label">Total views</span>
+                </div>
+                <div class="analytics-metric analytics-metric--accent">
+                  <span class="analytics-metric__value">+18%</span>
+                  <span class="analytics-metric__label">vs last week</span>
+                </div>
+                <div class="analytics-metric">
+                  <span class="analytics-metric__value">4.2%</span>
+                  <span class="analytics-metric__label">Avg. retention</span>
+                </div>
+                <div class="analytics-metric">
+                  <span class="analytics-metric__value">8.9%</span>
+                  <span class="analytics-metric__label">Engagement</span>
+                </div>
+              </div>
+
+              <div class="analytics-panel__platforms">
+                <div class="analytics-platform">
+                  <span class="analytics-platform__icon"><i class="fab fa-tiktok"></i></span>
+                  <span class="analytics-platform__name">TikTok</span>
+                  <span class="analytics-platform__stat">1.2M views</span>
+                </div>
+                <div class="analytics-platform">
+                  <span class="analytics-platform__icon"><i class="fab fa-instagram"></i></span>
+                  <span class="analytics-platform__name">Reels</span>
+                  <span class="analytics-platform__stat">720K views</span>
+                </div>
+                <div class="analytics-platform">
+                  <span class="analytics-platform__icon"><i class="fab fa-youtube"></i></span>
+                  <span class="analytics-platform__name">Shorts</span>
+                  <span class="analytics-platform__stat">480K views</span>
+                </div>
+              </div>
+
+              <div class="analytics-panel__top-clips">
+                <span class="analytics-panel__section-label">Top clips</span>
+                <div class="analytics-panel__clips-row">
+                  <div class="analytics-clip-card analytics-clip-card--top">
+                    <div class="analytics-clip-card__thumb">
+                      <img
+                        src="sources/clip1.png"
+                        alt=""
+                        width="64"
+                        height="114"
+                        loading="lazy"
+                      />
+                      <span class="analytics-clip-card__badge">Top performer</span>
+                    </div>
+                    <div class="analytics-clip-card__info">
+                      <span class="analytics-clip-card__views">84.2K</span>
+                      <span class="analytics-clip-card__label">views</span>
+                    </div>
+                  </div>
+                  <div class="analytics-clip-card">
+                    <div class="analytics-clip-card__thumb">
+                      <img
+                        src="sources/clip2.png"
+                        alt=""
+                        width="64"
+                        height="114"
+                        loading="lazy"
+                      />
+                      <span class="analytics-clip-card__badge analytics-clip-card__badge--retention"
+                        >Best retention</span>
+                    </div>
+                    <div class="analytics-clip-card__info">
+                      <span class="analytics-clip-card__views">52.1K</span>
+                      <span class="analytics-clip-card__label">views</span>
+                    </div>
+                  </div>
+                  <div class="analytics-clip-card">
+                    <div class="analytics-clip-card__thumb">
+                      <img
+                        src="sources/clip3.png"
+                        alt=""
+                        width="64"
+                        height="114"
+                        loading="lazy"
+                      />
+                      <span class="analytics-clip-card__badge analytics-clip-card__badge--engagement"
+                        >High engagement</span>
+                    </div>
+                    <div class="analytics-clip-card__info">
+                      <span class="analytics-clip-card__views">38.7K</span>
+                      <span class="analytics-clip-card__label">views</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="analytics__insights" aria-label="Beneficios de la analítica Clipr">
+            <article class="analytics-insight" aria-labelledby="insight-1-title">
+              <div class="analytics-insight__icon" aria-hidden="true">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="analytics-insight__title" id="insight-1-title">
+                Detecta los clips que más rinden
+              </h3>
+              <p class="analytics-insight__text">
+                Identifica qué momentos generan más views, más retención y más
+                interacción.
+              </p>
+            </article>
+
+            <article class="analytics-insight" aria-labelledby="insight-2-title">
+              <div class="analytics-insight__icon" aria-hidden="true">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <h3 class="analytics-insight__title" id="insight-2-title">
+                Compara rendimiento entre plataformas
+              </h3>
+              <p class="analytics-insight__text">
+                Entiende cómo funciona tu contenido en TikTok, Reels y Shorts
+                desde un mismo lugar.
+              </p>
+            </article>
+
+            <article class="analytics-insight" aria-labelledby="insight-3-title">
+              <div class="analytics-insight__icon" aria-hidden="true">
+                <i class="fas fa-redo"></i>
+              </div>
+              <h3 class="analytics-insight__title" id="insight-3-title">
+                Encuentra patrones que vale repetir
+              </h3>
+              <p class="analytics-insight__text">
+                Usa los datos para reconocer qué tipo de clips, formatos o
+                momentos merecen más atención.
+              </p>
+            </article>
+
+            <article class="analytics-insight" aria-labelledby="insight-4-title">
+              <div class="analytics-insight__icon" aria-hidden="true">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3 class="analytics-insight__title" id="insight-4-title">
+                Optimiza tu siguiente publicación
+              </h3>
+              <p class="analytics-insight__text">
+                Convierte rendimiento pasado en decisiones mejores para el
+                siguiente stream o clip.
+              </p>
+            </article>
+          </div>
+
+          <div class="analytics__rail" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section
+        class="pricing"
+        id="precios"
+        aria-labelledby="pricing-title"
+      >
+        <div class="pricing__ambient" aria-hidden="true"></div>
+        <div class="pricing__grid" aria-hidden="true"></div>
+        <div class="pricing__noise" aria-hidden="true"></div>
+
+        <div class="pricing__inner">
+          <header class="pricing__copy">
+            <p class="pricing__eyebrow">Pricing</p>
+            <h2 id="pricing-title" class="pricing__title">
+              <span class="hero__title-accent">Elige el plan</span> que mejor se adapta a tu ritmo de creación
+            </h2>
+            <p class="pricing__lede">
+              Empieza con lo esencial o escala tu flujo de clips con más
+              automatización, más volumen y más velocidad de publicación.
+            </p>
+
+              <div class="pricing__toggle" role="group" aria-label="Periodo de facturación">
+              <button
+                type="button"
+                class="pricing__toggle-btn pricing__toggle-btn--monthly"
+                data-pricing-period="monthly"
+                aria-pressed="true"
+              >
+                Mensual
+              </button>
+              <button
+                type="button"
+                class="pricing__toggle-btn pricing__toggle-btn--annual"
+                data-pricing-period="annual"
+                aria-pressed="false"
+              >
+                Anual
+              </button>
+              <span class="pricing__toggle-badge">Ahorra 20%</span>
+            </div>
+          </header>
+
+          <div class="pricing__cards">
+            <article class="pricing-card" aria-labelledby="plan-starter-title">
+              <div class="pricing-card__header">
+                <h3 class="pricing-card__name" id="plan-starter-title">Starter</h3>
+                <div class="pricing-card__price">
+                  <span class="pricing-card__amount" data-price-monthly>0</span>
+                  <span class="pricing-card__currency">€</span>
+                  <span class="pricing-card__period">/mes</span>
+                </div>
+                <p class="pricing-card__desc">
+                  Para empezar a probar Clipr con tu flujo de contenido
+                </p>
+              </div>
+              <ul class="pricing-card__features" role="list">
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Clips limitados por mes</span>
+                </li>
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Detección básica de highlights</span>
+                </li>
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Subtítulos automáticos</span>
+                </li>
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Exportación básica</span>
+                </li>
+              </ul>
+              <a class="pricing-card__cta pricing-card__cta--secondary" href="#empieza"
+                >Empieza gratis</a
+              >
+            </article>
+
+            <article class="pricing-card pricing-card--recommended" aria-labelledby="plan-pro-title">
+              <div class="pricing-card__badge">Más elegido</div>
+              <div class="pricing-card__header">
+                <h3 class="pricing-card__name" id="plan-pro-title">Pro</h3>
+                <div class="pricing-card__price">
+                  <span class="pricing-card__amount pricing-card__amount--monthly">12</span>
+                  <span class="pricing-card__amount pricing-card__amount--annual" hidden>9</span>
+                  <span class="pricing-card__currency">€</span>
+                  <span class="pricing-card__period">/mes</span>
+                </div>
+                <p class="pricing-card__desc">
+                  Para creadores que publican de forma constante y quieren ahorrar tiempo real
+                </p>
+              </div>
+              <ul class="pricing-card__features" role="list">
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Más clips por mes</span>
+                </li>
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Detección avanzada de highlights</span>
+                </li>
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Recorte inteligente a 9:16</span>
+                </li>
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Exportación rápida</span>
+                </li>
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Flujo optimizado para TikTok, Reels y Shorts</span>
+                </li>
+              </ul>
+              <a class="pricing-card__cta pricing-card__cta--primary" href="#empieza"
+                >Prueba Pro</a
+              >
+            </article>
+
+            <article class="pricing-card" aria-labelledby="plan-team-title">
+              <div class="pricing-card__header">
+                <h3 class="pricing-card__name" id="plan-team-title">Studio</h3>
+                <div class="pricing-card__price">
+                  <span class="pricing-card__amount">Custom</span>
+                </div>
+                <p class="pricing-card__desc">
+                  Para equipos, agencias o creadores con más volumen y workflow más avanzado
+                </p>
+              </div>
+              <ul class="pricing-card__features" role="list">
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Alto volumen de clips</span>
+                </li>
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Herramientas avanzadas</span>
+                </li>
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Workflow para equipos</span>
+                </li>
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Soporte prioritario</span>
+                </li>
+                <li class="pricing-card__feature" role="listitem">
+                  <i class="fas fa-check pricing-card__check" aria-hidden="true"></i>
+                  <span>Mayor escalabilidad</span>
+                </li>
+              </ul>
+              <a class="pricing-card__cta pricing-card__cta--secondary" href="#contacto"
+                >Hablar con el equipo</a
+              >
+            </article>
+          </div>
+
+          <p class="pricing__trust">
+            Sin tarjeta para empezar · Cancela cuando quieras · Diseñado para creadores y streamers
+          </p>
+
+          <div class="pricing__rail" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section
+        class="faq"
+        id="faq"
+        aria-labelledby="faq-title"
+      >
+        <div class="faq__ambient" aria-hidden="true"></div>
+        <div class="faq__noise" aria-hidden="true"></div>
+
+        <div class="faq__inner">
+          <header class="faq__copy">
+            <p class="faq__eyebrow">FAQ</p>
+            <h2 id="faq-title" class="faq__title">
+              <span class="hero__title-accent">Respuestas rápidas</span> antes de empezar
+            </h2>
+            <p class="faq__lede">
+              Todo lo que necesitas saber para empezar a convertir streams largos
+              en clips listos para publicar con Clipr.
+            </p>
+          </header>
+
+          <div class="faq__list" role="list">
+            <div class="faq__item" data-faq-item>
+              <button
+                type="button"
+                class="faq__question"
+                aria-expanded="false"
+                aria-controls="faq-answer-1"
+                id="faq-question-1"
+                data-faq-trigger
+              >
+                <span>¿Qué tipo de contenido puedo subir a Clipr?</span>
+                <i class="fas fa-chevron-down faq__chevron" aria-hidden="true"></i>
+              </button>
+              <div
+                class="faq__answer-wrap"
+                id="faq-answer-1"
+                role="region"
+                aria-labelledby="faq-question-1"
+                hidden
+              >
+                <p class="faq__answer">
+                  Puedes trabajar con streams largos, VODs y contenido pensado para
+                  encontrar momentos clave y convertirlos en clips listos para
+                  TikTok, Reels y Shorts.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item" data-faq-item>
+              <button
+                type="button"
+                class="faq__question"
+                aria-expanded="false"
+                aria-controls="faq-answer-2"
+                id="faq-question-2"
+                data-faq-trigger
+              >
+                <span>¿Clipr detecta automáticamente los mejores momentos?</span>
+                <i class="fas fa-chevron-down faq__chevron" aria-hidden="true"></i>
+              </button>
+              <div
+                class="faq__answer-wrap"
+                id="faq-answer-2"
+                role="region"
+                aria-labelledby="faq-question-2"
+                hidden
+              >
+                <p class="faq__answer">
+                  Sí. Clipr analiza tu contenido para detectar highlights, jugadas,
+                  reacciones y otros momentos con potencial para convertirse en clips.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item" data-faq-item>
+              <button
+                type="button"
+                class="faq__question"
+                aria-expanded="false"
+                aria-controls="faq-answer-3"
+                id="faq-question-3"
+                data-faq-trigger
+              >
+                <span>¿Los clips salen en formato vertical?</span>
+                <i class="fas fa-chevron-down faq__chevron" aria-hidden="true"></i>
+              </button>
+              <div
+                class="faq__answer-wrap"
+                id="faq-answer-3"
+                role="region"
+                aria-labelledby="faq-question-3"
+                hidden
+              >
+                <p class="faq__answer">
+                  Sí. Clipr prepara clips pensados para short-form content,
+                  incluyendo adaptación a formato vertical para plataformas como
+                  TikTok, Reels y Shorts.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item" data-faq-item>
+              <button
+                type="button"
+                class="faq__question"
+                aria-expanded="false"
+                aria-controls="faq-answer-4"
+                id="faq-question-4"
+                data-faq-trigger
+              >
+                <span>¿Necesito editar todo manualmente?</span>
+                <i class="fas fa-chevron-down faq__chevron" aria-hidden="true"></i>
+              </button>
+              <div
+                class="faq__answer-wrap"
+                id="faq-answer-4"
+                role="region"
+                aria-labelledby="faq-question-4"
+                hidden
+              >
+                <p class="faq__answer">
+                  No. La idea de Clipr es reducir trabajo manual y acelerar el
+                  proceso para que puedas pasar de stream largo a clip listo con
+                  mucha menos fricción.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item" data-faq-item>
+              <button
+                type="button"
+                class="faq__question"
+                aria-expanded="false"
+                aria-controls="faq-answer-5"
+                id="faq-question-5"
+                data-faq-trigger
+              >
+                <span>¿Sirve solo para streamers gaming?</span>
+                <i class="fas fa-chevron-down faq__chevron" aria-hidden="true"></i>
+              </button>
+              <div
+                class="faq__answer-wrap"
+                id="faq-answer-5"
+                role="region"
+                aria-labelledby="faq-question-5"
+                hidden
+              >
+                <p class="faq__answer">
+                  No. También puede funcionar para creadores de reacciones,
+                  variety, entrevistas, podcasts y otros formatos donde haya
+                  momentos que valga la pena recortar y publicar.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item" data-faq-item>
+              <button
+                type="button"
+                class="faq__question"
+                aria-expanded="false"
+                aria-controls="faq-answer-6"
+                id="faq-question-6"
+                data-faq-trigger
+              >
+                <span>¿Puedo probar Clipr antes de pagar?</span>
+                <i class="fas fa-chevron-down faq__chevron" aria-hidden="true"></i>
+              </button>
+              <div
+                class="faq__answer-wrap"
+                id="faq-answer-6"
+                role="region"
+                aria-labelledby="faq-question-6"
+                hidden
+              >
+                <p class="faq__answer">
+                  Sí. Puedes empezar con una opción inicial o plan de entrada para
+                  entender cómo encaja Clipr en tu flujo antes de escalar.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item" data-faq-item>
+              <button
+                type="button"
+                class="faq__question"
+                aria-expanded="false"
+                aria-controls="faq-answer-7"
+                id="faq-question-7"
+                data-faq-trigger
+              >
+                <span>¿En qué plataformas puedo publicar los clips?</span>
+                <i class="fas fa-chevron-down faq__chevron" aria-hidden="true"></i>
+              </button>
+              <div
+                class="faq__answer-wrap"
+                id="faq-answer-7"
+                role="region"
+                aria-labelledby="faq-question-7"
+                hidden
+              >
+                <p class="faq__answer">
+                  Clipr está pensado para ayudarte a publicar en plataformas como
+                  TikTok, Instagram Reels y YouTube Shorts.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item" data-faq-item>
+              <button
+                type="button"
+                class="faq__question"
+                aria-expanded="false"
+                aria-controls="faq-answer-8"
+                id="faq-question-8"
+                data-faq-trigger
+              >
+                <span>¿Cómo empiezo?</span>
+                <i class="fas fa-chevron-down faq__chevron" aria-hidden="true"></i>
+              </button>
+              <div
+                class="faq__answer-wrap"
+                id="faq-answer-8"
+                role="region"
+                aria-labelledby="faq-question-8"
+                hidden
+              >
+                <p class="faq__answer">
+                  Solo necesitas subir tu stream o VOD, dejar que Clipr procese el
+                  contenido y empezar a generar clips listos para publicar.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__rail" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section
+        class="cta-final"
+        id="empieza"
+        aria-labelledby="cta-final-title"
+      >
+        <div class="cta-final__ambient" aria-hidden="true"></div>
+        <div class="cta-final__glow" aria-hidden="true"></div>
+        <div class="cta-final__noise" aria-hidden="true"></div>
+
+        <div class="cta-final__inner">
+          <p class="cta-final__eyebrow">Listo para empezar</p>
+          <h2 id="cta-final-title" class="cta-final__title">
+            <span class="hero__title-accent">Deja de perder horas</span> editando y <span class="hero__title-accent">convierte tus streams en clips listos para publicar</span>
+          </h2>
+          <p class="cta-final__lede">
+            Sube tu contenido, deja que Clipr encuentre los mejores momentos y
+            empieza a publicar más rápido en TikTok, Reels y Shorts.
+          </p>
+
+          <div class="cta-final__chips" aria-hidden="true">
+            <span class="cta-final__chip">AI highlight detection</span>
+            <span class="cta-final__chip">9:16 ready</span>
+            <span class="cta-final__chip">Auto-captioned</span>
+            <span class="cta-final__chip">Ready to post</span>
+          </div>
+
+          <div class="cta-final__actions">
+            <a class="cta-final__btn cta-final__btn--primary" href="#empieza"
+              >Comienza gratis</a
+            >
+            <a class="cta-final__btn cta-final__btn--ghost" href="#como-funciona"
+              >Ver cómo funciona</a
+            >
+          </div>
+
+          <p class="cta-final__micro">
+            Sin tarjeta · Menos edición manual · Más clips listos para publicar
+          </p>
+        </div>
+      </section>
+
+      <footer class="site-footer" id="contacto">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">
+            <a class="site-footer__logo" href="/" aria-label="Clipr — inicio">
+              <img
+                class="site-footer__logo-img"
+                src="favicon.svg"
+                width="36"
+                height="36"
+                alt=""
+                decoding="async"
+              />
+              <span class="site-footer__logo-text">clipr</span>
+            </a>
+            <p class="site-footer__tagline">
+              Convierte streams largos en clips listos para TikTok, Reels y
+              Shorts con ayuda de IA.
+            </p>
+          </div>
+
+          <nav class="site-footer__nav" aria-label="Footer">
+            <div class="site-footer__column">
+              <h4 class="site-footer__column-title">Producto</h4>
+              <ul class="site-footer__links">
+                <li><a href="#como-funciona">Cómo funciona</a></li>
+                <li><a href="#capacidades">Features</a></li>
+                <li><a href="#integraciones">Integraciones</a></li>
+                <li><a href="#analitica">Analítica</a></li>
+                <li><a href="#precios">Pricing</a></li>
+              </ul>
+            </div>
+            <div class="site-footer__column">
+              <h4 class="site-footer__column-title">Recursos</h4>
+              <ul class="site-footer__links">
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contacto">Soporte</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="site-footer__column">
+              <h4 class="site-footer__column-title">Empresa</h4>
+              <ul class="site-footer__links">
+                <li><a href="#contacto">Sobre Clipr</a></li>
+                <li><a href="#contacto">Términos</a></li>
+                <li><a href="#contacto">Privacidad</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p class="site-footer__copyright">
+            © 2026 Clipr. Todos los derechos reservados.
+          </p>
+          <div class="site-footer__legal">
+            <a href="#contacto">Términos</a>
+            <a href="#contacto">Privacidad</a>
+          </div>
+        </div>
+      </footer>
     </main>
 
     <script type="module" src="js/navbar-entry.mjs"></script>
+    <script src="sources/portable/clipr-dashboard-mockup.js"></script>
+    <script src="js/faq-accordion.js"></script>
+    <script src="js/pricing-toggle.js"></script>
     <script src="sources/portable/clipr-dashboard-mockup.js"></script>
   </body>
 </html>
