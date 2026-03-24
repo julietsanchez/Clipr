@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+  <!-- ========================================
+       HEAD: Configuración y recursos externos
+       ======================================== -->
   <head>
+    <!-- Configuración básica -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -11,25 +15,53 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="favicon.svg" />
     <meta name="theme-color" content="#0A0B16" />
+    
+    <!-- Optimización de carga: preconnect y dns-prefetch -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    
+    <!-- Fuentes de Google -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="css/landing.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-      media="print"
-      onload="this.media='all'"
     />
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
     <link rel="stylesheet" href="sources/portable/clipr-dashboard-mockup.css" />
+  
+    <!-- Schema.org para SEO -->
+    <script type="application/ld+json">
+      {
+       "@context": "https://schema.org",
+       "@type": "SoftwareApplication",
+       "name": "Clipr",
+       "applicationCategory": "VideoEditingApplication",
+       "operatingSystem": "Web",
+       "description": "AI tool to turn Twitch streams into viral clips."
+      }
+    </script>
   </head>
+  
+  <!-- ========================================
+       BODY: Contenido principal de la página
+       ======================================== -->
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH7S6NFZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <!-- ========================================
+         HEADER: Navegación principal y logo
+         ======================================== -->
     <header class="site-header" data-site-header>
       <div class="site-header__inner">
         <a class="site-logo" href="/" aria-label="Clipr — inicio">
@@ -40,6 +72,7 @@
             height="40"
             alt=""
             decoding="async"
+            fetchpriority="high"
           />
           <span class="site-logo__text">clipr</span>
         </a>
@@ -110,20 +143,13 @@
       </div>
     </header>
 
+    <!-- ========================================
+         MAIN: Contenido principal de la landing
+         ======================================== -->
     <main id="main">
+      <!-- SECCIÓN HERO: Primera pantalla con título y CTA principal -->
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero__bg" aria-hidden="true"></div>
-        <div
-          class="hero__carousel"
-          data-hero-carousel-root
-          hidden
-          aria-hidden="true"
-        >
-          <div class="hero-carousel__drag" data-hero-drag>
-            <div class="hero-carousel__spin" data-hero-spin></div>
-            <div class="hero-carousel__ground" data-hero-ground></div>
-          </div>
-        </div>
         <div class="hero__veil" aria-hidden="true"></div>
         <div class="hero__content">
           <h1 id="hero-title" class="hero__title">
@@ -217,6 +243,7 @@
                           alt=""
                           class="clipr-clip-thumb"
                           loading="lazy"
+                          decoding="async"
                           width="200"
                           height="126"
                         />
@@ -231,6 +258,7 @@
                           alt=""
                           class="clipr-clip-thumb"
                           loading="lazy"
+                          decoding="async"
                           width="200"
                           height="126"
                         />
@@ -245,6 +273,7 @@
                           alt=""
                           class="clipr-clip-thumb"
                           loading="lazy"
+                          decoding="async"
                           width="200"
                           height="126"
                         />
@@ -284,6 +313,7 @@
         </div>
       </section>
 
+      <!-- SECCIÓN PLATFORM BRIDGE: Flujo de plataformas (Twitch → Clipr → Redes) -->
       <section
         class="platform-bridge"
         id="plataformas"
@@ -445,6 +475,11 @@
                 <li class="platform-bridge__badge">Auto-captioned</li>
                 <li class="platform-bridge__badge">Ready to post</li>
               </ul>
+              <div class="platform-bridge__cta">
+                <a href="#precios" class="platform-bridge__cta-btn">
+                  ¡Comienza Gratis!
+                </a>
+              </div>
             </div>
           </div>
 
@@ -452,6 +487,7 @@
         </div>
       </section>
 
+      <!-- SECCIÓN CÓMO FUNCIONA: Pasos del proceso -->
       <section
         class="how-it-works"
         id="como-funciona"
@@ -465,8 +501,7 @@
           <header class="how-it-works__copy">
             <p class="how-it-works__eyebrow">Cómo funciona</p>
             <h2 id="how-it-works-title" class="how-it-works__title">
-              Convierte tus streams en clips en solo
-              <span class="how-it-works__title-accent">3 pasos</span>
+              Convierte tus streams en clips <span class="text-gradient">en solo 3 pasos</span>
             </h2>
             <p class="how-it-works__lede">
               Sube tu VOD, deja que Clipr detecte los mejores momentos y obtén
@@ -626,6 +661,8 @@
         </div>
       </section>
 
+      <!-- SECCIÓN FEATURES: Características principales del producto -->
+      <!-- Sección que describe las características del producto -->
       <section
         class="features"
         id="capacidades"
@@ -642,7 +679,7 @@
               Todo lo que <span class="hero__title-accent">Clipr</span> hace para convertir streams en <span class="hero__title-accent">clips que sí se publican</span>
             </h2>
             <p class="features__lede">
-              Desde detectar <span class="text-gradient">highlights con IA</span> hasta preparar clips <span class="text-gradient">listos para publicar</span>, Clipr automatiza las partes que más tiempo te quitan.
+              Desde detectar highlights con IA hasta preparar clips listos para publicar, Clipr automatiza las partes que más tiempo te quitan.
             </p>
           </header>
 
@@ -681,11 +718,14 @@
               </div>
               <div class="feature-card__content">
                 <h3 class="feature-card__title" id="feature-hero-title">
-                  Detección de <span class="text-gradient">highlights con IA</span>
+                  Detección de highlights con IA
                 </h3>
                 <p class="feature-card__text">
                   Clipr analiza tus streams y detecta jugadas, reacciones y momentos clave para convertirlos en clips sin revisar horas de contenido manualmente.
                 </p>
+                <a href="#precios" class="feature-card__cta">
+                  ¡Comienza Gratis!
+                </a>
               </div>
             </article>
 
@@ -702,7 +742,7 @@
               </div>
               <div class="feature-card__content">
                 <h3 class="feature-card__title" id="feature-2-title">
-                  <span class="text-gradient">Subtítulos automáticos</span>
+                  Subtítulos automáticos
                 </h3>
                 <p class="feature-card__text">
                   Genera subtítulos claros y listos para clips verticales, para mejorar retención y comprensión al instante.
@@ -722,7 +762,7 @@
               </div>
               <div class="feature-card__content">
                 <h3 class="feature-card__title" id="feature-3-title">
-                  Recorte inteligente a <span class="text-gradient">9:16</span>
+                  Recorte inteligente a 9:16
                 </h3>
                 <p class="feature-card__text">
                   Adapta el contenido a formato vertical sin ajustar encuadres a mano.
@@ -743,7 +783,7 @@
               </div>
               <div class="feature-card__content">
                 <h3 class="feature-card__title" id="feature-4-title">
-                  Clips <span class="text-gradient">listos para publicar</span>
+                  Clips listos para publicar
                 </h3>
                 <p class="feature-card__text">
                   Exporta para short-form con menos pasos y mejor consistencia.
@@ -764,7 +804,7 @@
               </div>
               <div class="feature-card__content">
                 <h3 class="feature-card__title" id="feature-5-title">
-                  <span class="text-gradient">Más velocidad</span>, menos edición manual
+                  Más velocidad, menos edición manual
                 </h3>
                 <p class="feature-card__text">
                   Reduce el tiempo entre stream y publicación para mantener un ritmo constante.
@@ -777,6 +817,8 @@
         </div>
       </section>
 
+      <!-- SECCIÓN COMPARE: Comparación manual vs Clipr -->
+      <!-- Sección que compara el proceso manual con el proceso de Clipr -->
       <section
         class="compare"
         id="manual-vs-clipr"
@@ -790,10 +832,10 @@
           <header class="compare__copy">
             <p class="compare__eyebrow">Manual vs Clipr</p>
             <h2 id="compare-title" class="compare__title">
-              La diferencia entre <span class="text-gradient">perder horas</span> editando y tener <span class="text-gradient">clips listos</span> en <span class="text-gradient">minutos</span>
+              La diferencia entre perder horas editando y tener <span class="text-gradient">clips listos en minutos</span>
             </h2>
             <p class="compare__lede">
-              Clipr automatiza el trabajo repetitivo para que puedas publicar más rápido, <span class="text-gradient">automáticamente</span>.
+              Clipr automatiza el trabajo repetitivo para que puedas publicar más rápido, automáticamente.
             </p>
           </header>
 
@@ -857,7 +899,7 @@
               <div class="compare-panel__header">
                 <span class="compare-panel__label compare-panel__label--clipr" id="compare-clipr-label">
                   <img src="favicon.svg" width="20" height="20" alt="" decoding="async" aria-hidden="true" />
-                  <span class="text-gradient">con Clipr</span>
+                  con Clipr
                 </span>
                 <p class="compare-panel__intro compare-panel__intro--clipr">
                   Un flujo optimizado para publicar más sin fricción.
@@ -908,6 +950,11 @@
                   <span>Clips listos para TikTok, Reels y Shorts</span>
                 </li>
               </ul>
+              <div class="compare-panel__cta">
+                <a href="#precios" class="compare-panel__cta-btn">
+                  ¡Comienza Gratis!
+                </a>
+              </div>
             </div>
           </div>
 
@@ -915,6 +962,8 @@
         </div>
       </section>
 
+      <!-- SECCIÓN RESULTADOS: Testimonios y métricas de usuarios -->
+      <!-- Sección que muestra los resultados y testimonios de los usuarios -->
       <section
         class="results"
         id="resultados"
@@ -928,7 +977,7 @@
           <header class="results__copy">
             <p class="results__eyebrow">Resultados reales</p>
             <h2 id="results-title" class="results__title">
-              Creadores que <span class="text-gradient">publican más</span>, <span class="text-gradient">más rápido</span> y con <span class="text-gradient">menos tiempo</span> perdido
+              Creadores que publican <span class="text-gradient">más, más rápido</span> y con <span class="text-gradient">menos tiempo</span> perdido
             </h2>
             <p class="results__lede">
               Desde clips listos para TikTok hasta más velocidad entre un stream
@@ -939,7 +988,7 @@
 
           <div class="results__stats" aria-label="Métricas de Clipr">
             <div class="results-stat">
-              <span class="results-stat__value"><span class="text-gradient">50.000+</span></span>
+              <span class="results-stat__value">50.000+</span>
               <span class="results-stat__label">creadores usando Clipr</span>
             </div>
             <div class="results-stat">
@@ -1014,6 +1063,8 @@
         </div>
       </section>
 
+      <!-- SECCIÓN INTEGRACIONES: Plataformas compatibles -->
+      <!-- Sección que muestra las plataformas compatibles con Clipr -->
       <section
         class="integrations"
         id="integraciones"
@@ -1027,11 +1078,11 @@
           <header class="integrations__copy">
             <p class="integrations__eyebrow">Integraciones</p>
             <h2 id="integrations-title" class="integrations__title">
-              <span class="text-gradient">Clipr</span> encaja en tu <span class="text-gradient">flujo de contenido</span>
+              Clipr encaja en tu flujo de contenido
             </h2>
             <p class="integrations__lede">
               Conecta tus streams, deja que la IA encuentre los mejores momentos
-              y lleva tus clips <span class="text-gradient">listo para publicar</span> a las plataformas donde realmente <span class="text-gradient">creces</span>.
+              y lleva tus clips listo para publicar a las plataformas donde realmente creces.
             </p>
           </header>
 
@@ -1190,6 +1241,8 @@
         </div>
       </section>
 
+      <!-- SECCIÓN ANALÍTICA: Dashboard de métricas y performance -->
+      <!-- Sección que muestra el dashboard de métricas y performance de Clipr -->
       <section
         class="analytics"
         id="analitica"
@@ -1203,189 +1256,97 @@
           <header class="analytics__copy">
             <p class="analytics__eyebrow">Analítica</p>
             <h2 id="analytics-title" class="analytics__title">
-              Entiende <span class="text-gradient">qué clips funcionan mejor</span>, detecta <span class="text-gradient">patrones</span> y <span class="text-gradient">optimiza</span> tu <span class="text-gradient">siguiente publicación</span>
+              Aprende qué funciona y <span class="text-gradient">publica mejor cada vez</span>
             </h2>
             <p class="analytics__lede">
-              Clipr te da visibilidad sobre el rendimiento de tus clips para que
-              puedas detectar qué formatos, momentos y publicaciones generan más
-              alcance.
+              Detecta patrones, optimiza formatos y convierte datos en decisiones para tu siguiente clip.
             </p>
           </header>
 
-          <div class="analytics__panel-wrap">
-            <div class="analytics-panel" aria-hidden="true">
-              <div class="analytics-panel__header">
-                <div class="analytics-panel__title-row">
-                  <img
-                    class="analytics-panel__logo"
-                    src="favicon.svg"
-                    width="22"
-                    height="22"
-                    alt=""
-                    decoding="async"
-                  />
-                  <span class="analytics-panel__label">Clip performance</span>
+          <div class="analytics__body">
+            <div class="clipr-analytics-features-list">
+              <div class="clipr-analytics-feature-item">
+                <div class="clipr-analytics-feature-icon" aria-hidden="true">
+                  <i class="fas fa-chart-line"></i>
                 </div>
-                <div class="analytics-panel__tabs">
-                  <span class="analytics-panel__tab analytics-panel__tab--active"
-                    >Last 7 days</span>
-                  <span class="analytics-panel__tab">Last 30 days</span>
+                <div>
+                  <h3>Analítica en tiempo real</h3>
+                  <p>Monitorea vistas, engagement y crecimiento a medida que sucede en cada plataforma.</p>
                 </div>
               </div>
-
-              <div class="analytics-panel__metrics">
-                <div class="analytics-metric analytics-metric--hero">
-                  <span class="analytics-metric__value">2.4M</span>
-                  <span class="analytics-metric__label">Total views</span>
+              <div class="clipr-analytics-feature-item">
+                <div class="clipr-analytics-feature-icon" aria-hidden="true">
+                  <i class="fas fa-layer-group"></i>
                 </div>
-                <div class="analytics-metric analytics-metric--accent">
-                  <span class="analytics-metric__value">+18%</span>
-                  <span class="analytics-metric__label">vs last week</span>
-                </div>
-                <div class="analytics-metric">
-                  <span class="analytics-metric__value">4.2%</span>
-                  <span class="analytics-metric__label">Avg. retention</span>
-                </div>
-                <div class="analytics-metric">
-                  <span class="analytics-metric__value">8.9%</span>
-                  <span class="analytics-metric__label">Engagement</span>
+                <div>
+                  <h3>Comparativa entre plataformas</h3>
+                  <p>Entiende qué funciona en TikTok, Reels y Shorts desde un mismo lugar.</p>
                 </div>
               </div>
-
-              <div class="analytics-panel__platforms">
-                <div class="analytics-platform">
-                  <span class="analytics-platform__icon"><i class="fab fa-tiktok"></i></span>
-                  <span class="analytics-platform__name">TikTok</span>
-                  <span class="analytics-platform__stat">1.2M views</span>
+              <div class="clipr-analytics-feature-item">
+                <div class="clipr-analytics-feature-icon" aria-hidden="true">
+                  <i class="fas fa-trophy"></i>
                 </div>
-                <div class="analytics-platform">
-                  <span class="analytics-platform__icon"><i class="fab fa-instagram"></i></span>
-                  <span class="analytics-platform__name">Reels</span>
-                  <span class="analytics-platform__stat">720K views</span>
-                </div>
-                <div class="analytics-platform">
-                  <span class="analytics-platform__icon"><i class="fab fa-youtube"></i></span>
-                  <span class="analytics-platform__name">Shorts</span>
-                  <span class="analytics-platform__stat">480K views</span>
+                <div>
+                  <h3>Detecta tus mejores clips</h3>
+                  <p>Identifica qué momentos generan más alcance y repítelos en tu siguiente contenido.</p>
                 </div>
               </div>
+            </div>
 
-              <div class="analytics-panel__top-clips">
-                <span class="analytics-panel__section-label">Top clips</span>
-                <div class="analytics-panel__clips-row">
-                  <div class="analytics-clip-card analytics-clip-card--top">
-                    <div class="analytics-clip-card__thumb">
-                      <img
-                        src="sources/clip1.png"
-                        alt=""
-                        width="64"
-                        height="114"
-                        loading="lazy"
-                      />
-                      <span class="analytics-clip-card__badge">Top performer</span>
-                    </div>
-                    <div class="analytics-clip-card__info">
-                      <span class="analytics-clip-card__views">84.2K</span>
-                      <span class="analytics-clip-card__label">views</span>
-                    </div>
+            <div class="analytics__visual">
+              <div class="clipr-analytics-dashboard" aria-hidden="true">
+                <div class="clipr-analytics-header">
+                  <div class="clipr-analytics-title">Performance Dashboard</div>
+                  <div class="clipr-analytics-period">Últimos 30 días</div>
+                </div>
+                <div class="clipr-analytics-metrics">
+                  <div class="clipr-analytics-metric">
+                    <div class="clipr-analytics-metric-label">Total Views</div>
+                    <div class="clipr-analytics-metric-value">2.4M</div>
+                    <div class="clipr-analytics-metric-change clipr-analytics-positive">+23.5%</div>
                   </div>
-                  <div class="analytics-clip-card">
-                    <div class="analytics-clip-card__thumb">
-                      <img
-                        src="sources/clip2.png"
-                        alt=""
-                        width="64"
-                        height="114"
-                        loading="lazy"
-                      />
-                      <span class="analytics-clip-card__badge analytics-clip-card__badge--retention"
-                        >Best retention</span>
-                    </div>
-                    <div class="analytics-clip-card__info">
-                      <span class="analytics-clip-card__views">52.1K</span>
-                      <span class="analytics-clip-card__label">views</span>
-                    </div>
+                  <div class="clipr-analytics-metric">
+                    <div class="clipr-analytics-metric-label">Engagement</div>
+                    <div class="clipr-analytics-metric-value">8.2%</div>
+                    <div class="clipr-analytics-metric-change clipr-analytics-positive">+1.8%</div>
                   </div>
-                  <div class="analytics-clip-card">
-                    <div class="analytics-clip-card__thumb">
-                      <img
-                        src="sources/clip3.png"
-                        alt=""
-                        width="64"
-                        height="114"
-                        loading="lazy"
-                      />
-                      <span class="analytics-clip-card__badge analytics-clip-card__badge--engagement"
-                        >High engagement</span>
-                    </div>
-                    <div class="analytics-clip-card__info">
-                      <span class="analytics-clip-card__views">38.7K</span>
-                      <span class="analytics-clip-card__label">views</span>
-                    </div>
+                </div>
+                <div class="clipr-analytics-chart">
+                  <div class="clipr-chart-bars">
+                    <div class="clipr-chart-bar" style="height: 45%;"></div>
+                    <div class="clipr-chart-bar" style="height: 60%;"></div>
+                    <div class="clipr-chart-bar" style="height: 55%;"></div>
+                    <div class="clipr-chart-bar" style="height: 75%;"></div>
+                    <div class="clipr-chart-bar" style="height: 70%;"></div>
+                    <div class="clipr-chart-bar" style="height: 85%;"></div>
+                    <div class="clipr-chart-bar" style="height: 100%;"></div>
+                  </div>
+                </div>
+                <div class="clipr-analytics-platforms">
+                  <div class="clipr-platform-stat">
+                    <span class="clipr-platform-icon"><i class="fab fa-tiktok"></i></span>
+                    <span>1.2M views</span>
+                  </div>
+                  <div class="clipr-platform-stat">
+                    <span class="clipr-platform-icon"><i class="fab fa-instagram"></i></span>
+                    <span>780K views</span>
+                  </div>
+                  <div class="clipr-platform-stat">
+                    <span class="clipr-platform-icon"><i class="fab fa-youtube"></i></span>
+                    <span>420K views</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="analytics__insights" aria-label="Beneficios de la analítica Clipr">
-            <article class="analytics-insight analytics-insight--hero" aria-labelledby="insight-1-title">
-              <div class="analytics-insight__icon" aria-hidden="true">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <h3 class="analytics-insight__title" id="insight-1-title">
-                Detecta los clips que más rinden
-              </h3>
-              <p class="analytics-insight__text">
-                Identifica qué momentos generan más views, más retención y más
-                interacción.
-              </p>
-            </article>
-
-            <article class="analytics-insight" aria-labelledby="insight-2-title">
-              <div class="analytics-insight__icon" aria-hidden="true">
-                <i class="fas fa-layer-group"></i>
-              </div>
-              <h3 class="analytics-insight__title" id="insight-2-title">
-                Compara rendimiento entre plataformas
-              </h3>
-              <p class="analytics-insight__text">
-                Entiende cómo funciona tu contenido en TikTok, Reels y Shorts
-                desde un mismo lugar.
-              </p>
-            </article>
-
-            <article class="analytics-insight" aria-labelledby="insight-3-title">
-              <div class="analytics-insight__icon" aria-hidden="true">
-                <i class="fas fa-redo"></i>
-              </div>
-              <h3 class="analytics-insight__title" id="insight-3-title">
-                Encuentra patrones que vale repetir
-              </h3>
-              <p class="analytics-insight__text">
-                Usa los datos para reconocer qué tipo de clips, formatos o
-                momentos merecen más atención.
-              </p>
-            </article>
-
-            <article class="analytics-insight" aria-labelledby="insight-4-title">
-              <div class="analytics-insight__icon" aria-hidden="true">
-                <i class="fas fa-rocket"></i>
-              </div>
-              <h3 class="analytics-insight__title" id="insight-4-title">
-                Optimiza tu siguiente publicación
-              </h3>
-              <p class="analytics-insight__text">
-                Convierte rendimiento pasado en decisiones mejores para el
-                siguiente stream o clip.
-              </p>
-            </article>
-          </div>
-
           <div class="analytics__rail" aria-hidden="true"></div>
         </div>
       </section>
 
+      <!-- SECCIÓN PRICING: Planes y precios -->
+      <!-- Sección que muestra los planes y precios de Clipr -->
       <section
         class="pricing"
         id="precios"
@@ -1399,11 +1360,11 @@
           <header class="pricing__copy">
             <p class="pricing__eyebrow">Pricing</p>
             <h2 id="pricing-title" class="pricing__title">
-              Elige el plan que mejor se adapta a tu <span class="text-gradient">ritmo de creación</span>
+              Elige el plan que mejor se adapta a tu ritmo de creación
             </h2>
             <p class="pricing__lede">
               Empieza con lo esencial o escala tu flujo de clips con más
-              automatización, <span class="text-gradient">más volumen</span> y <span class="text-gradient">más velocidad</span> de publicación.
+              automatización, más volumen y más velocidad de publicación.
             </p>
 
               <div class="pricing__toggle" role="group" aria-label="Periodo de facturación">
@@ -1466,7 +1427,7 @@
             <article class="pricing-card pricing-card--recommended" aria-labelledby="plan-pro-title">
               <div class="pricing-card__badge">Más elegido</div>
               <div class="pricing-card__header">
-                <h3 class="pricing-card__name" id="plan-pro-title"><span class="text-gradient">Pro</span></h3>
+                <h3 class="pricing-card__name" id="plan-pro-title">Pro</h3>
                 <div class="pricing-card__price">
                   <span class="pricing-card__amount pricing-card__amount--monthly">12</span>
                   <span class="pricing-card__amount pricing-card__amount--annual" hidden>9</span>
@@ -1511,7 +1472,7 @@
                   <span class="pricing-card__amount">Custom</span>
                 </div>
                 <p class="pricing-card__desc">
-                  Para <span class="text-gradient">equipo</span>s, agencias o creadores con workflow y volumen avanzado
+                  Para equipos, agencias o creadores con workflow y volumen avanzado
                 </p>
               </div>
               <ul class="pricing-card__features" role="list">
@@ -1550,6 +1511,8 @@
         </div>
       </section>
 
+      <!-- SECCIÓN FAQ: Preguntas frecuentes -->
+      <!-- Sección que muestra las preguntas frecuentes sobre Clipr -->
       <section
         class="faq"
         id="faq"
@@ -1562,11 +1525,11 @@
           <header class="faq__copy">
             <p class="faq__eyebrow">FAQ</p>
             <h2 id="faq-title" class="faq__title">
-              <span class="text-gradient">Respuestas rápidas</span> <span class="text-gradient">antes de empezar</span>
+              Respuestas rápidas antes de empezar
             </h2>
             <p class="faq__lede">
               Todo lo que necesitas saber para empezar a convertir streams largos
-              en clips listos para publicar con Clipr, <span class="text-gradient">automáticamente</span> y en <span class="text-gradient">vertical</span>.
+              en clips listos para publicar con Clipr, automáticamente y en vertical.
             </p>
           </header>
 
@@ -1788,6 +1751,8 @@
         </div>
       </section>
 
+      <!-- SECCIÓN CTA FINAL: Llamado a la acción final -->
+      <!-- Sección que muestra el llamado a la acción final para empezar a usar Clipr -->
       <section
         class="cta-final"
         id="empieza"
@@ -1801,11 +1766,11 @@
           <div class="cta-final__panel">
             <p class="cta-final__eyebrow">Listo para empezar</p>
             <h2 id="cta-final-title" class="cta-final__title">
-              <span class="text-gradient">Deja de perder horas</span> editando y convierte tus streams en <span class="text-gradient">clips listos</span> para <span class="text-gradient">publicar</span>
+              Deja de perder horas editando y convierte tus streams en clips listos para publicar
             </h2>
             <p class="cta-final__lede">
               Sube tu contenido, deja que Clipr encuentre los mejores momentos y
-              <span class="text-gradient">empieza gratis</span>.
+              empieza gratis.
             </p>
 
             <div class="cta-final__chips" aria-hidden="true">
@@ -1894,8 +1859,23 @@
     </main>
 
     <script type="module" src="js/navbar-entry.mjs"></script>
-    <script src="sources/portable/clipr-dashboard-mockup.js"></script>
-    <script src="js/faq-accordion.js"></script>
-    <script src="js/pricing-toggle.js"></script>
+    <script defer src="sources/portable/clipr-dashboard-mockup.js"></script>
+    <script defer src="js/faq-accordion.js"></script>
+    <script defer src="js/pricing-toggle.js"></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DE53MF5VG2');
+    </script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-DE53MF5VG2"></script>
+    <script defer>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PH7S6NFZ');
+    </script>
   </body>
 </html>

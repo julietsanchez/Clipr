@@ -1,18 +1,19 @@
 /**
- * Navbar: menú móvil y switch de idioma ES/EN.
+ * NAVBAR: Menú móvil y switch de idioma ES/EN
+ * Este archivo maneja la navegación móvil y el cambio de idioma
  */
+
+// Importamos las funciones necesarias
 import { resolveDocumentLang } from "./i18n-nav.mjs";
-import "./hero-carousel.mjs";
 import "./hero-micro.mjs";
 
+// Función helper: verifica si un elemento es HTML válido
 function isHTMLElement(el) {
   return el instanceof HTMLElement;
 }
 
-/**
- * @param {HTMLElement} header
- * @param {boolean} open
- */
+// Función: Abre o cierra el menú móvil
+// Parámetros: header (elemento del header), open (true/false)
 function setNavOpen(header, open) {
   if (!isHTMLElement(header)) return;
   header.dataset.navOpen = open ? "true" : "false";
@@ -27,10 +28,8 @@ function setNavOpen(header, open) {
   document.body.style.overflow = open ? "hidden" : "";
 }
 
-/**
- * @param {HTMLElement} wrap
- * @param {MouseEvent} event
- */
+// Función: Cierra el menú si haces click fuera de él
+// Parámetros: wrap (contenedor del nav), event (evento de click)
 function closeNavIfClickOutside(wrap, event) {
   const header = document.querySelector("[data-site-header]");
   const toggle = header && header.querySelector("[data-nav-toggle]");
@@ -48,7 +47,10 @@ function closeNavIfClickOutside(wrap, event) {
   }
 }
 
+// Función principal: Inicializa el menú móvil
+// Configura todos los eventos del menú (click, escape, resize)
 function initMobileNav() {
+  // Buscamos los elementos del header
   const header = document.querySelector("[data-site-header]");
   const toggle = header && header.querySelector("[data-nav-toggle]");
   const wrap = header && header.querySelector("[data-nav-wrap]");
@@ -56,11 +58,13 @@ function initMobileNav() {
     return;
   }
 
+  // Evento: Click en el botón hamburguesa
   toggle.addEventListener("click", function () {
     const open = header.dataset.navOpen !== "true";
     setNavOpen(header, open);
   });
 
+  // Evento: Click en links internos (cierra el menú en móvil)
   wrap.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function () {
       if (window.matchMedia("(max-width: 900px)").matches) {
@@ -69,10 +73,12 @@ function initMobileNav() {
     });
   });
 
+  // Evento: Click fuera del menú (lo cierra)
   document.addEventListener("click", function (e) {
     closeNavIfClickOutside(wrap, e);
   });
 
+  // Evento: Tecla Escape (cierra el menú)
   window.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && header.dataset.navOpen === "true") {
       setNavOpen(header, false);
@@ -80,6 +86,7 @@ function initMobileNav() {
     }
   });
 
+  // Evento: Resize de ventana (cierra el menú si pasamos a desktop)
   window.addEventListener("resize", function () {
     if (window.innerWidth > 900 && header.dataset.navOpen === "true") {
       setNavOpen(header, false);
@@ -87,10 +94,8 @@ function initMobileNav() {
   });
 }
 
-/**
- * @param {HTMLElement} root
- * @param {'es' | 'en'} lang
- */
+// Función: Cambia el estado del switch de idioma
+// Parámetros: root (elemento del switch), lang ("es" o "en")
 function setLangSwitchState(root, lang) {
   const thumb = root.querySelector("[data-lang-thumb]");
   const buttons = root.querySelectorAll("[data-lang-value]");
@@ -109,6 +114,8 @@ function setLangSwitchState(root, lang) {
   thumb.classList.toggle("lang-switch__thumb--en", lang === "en");
 }
 
+// Función principal: Inicializa el switch de idioma ES/EN
+// Configura el estado inicial y los eventos de cambio
 function initLangSwitch() {
   const root = document.querySelector("[data-lang-switch]");
   if (!isHTMLElement(root)) return;
@@ -146,5 +153,6 @@ function initLangSwitch() {
   });
 }
 
+// Inicializamos todo cuando carga la página
 initMobileNav();
 initLangSwitch();

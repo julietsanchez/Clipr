@@ -11,12 +11,11 @@ required=(
   "js/navbar-entry.mjs"
   "js/hero-micro.mjs"
   "js/i18n-nav.mjs"
-  "js/hero-sources.mjs"
-  "js/hero-carousel.mjs"
+  "js/faq-accordion.js"
+  "js/pricing-toggle.js"
   "sources/clip1.png"
   "sources/clip2.png"
   "sources/clip3.png"
-  "sources/clip4.png"
   "sources/fondodehero.png"
   "sources/portable/clipr-dashboard-mockup.css"
   "sources/portable/clipr-dashboard-mockup.js"
@@ -31,5 +30,5 @@ for f in "${required[@]}"; do
 done
 
 echo "Ejecutando tests Node..."
-node --test tests/i18n-nav.test.mjs tests/hero-carousel.test.mjs
+node --test tests/i18n-nav.test.mjs
 echo "Verificación completada."

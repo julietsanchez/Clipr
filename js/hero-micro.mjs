@@ -1,62 +1,39 @@
 /**
- * Hero: parallax muy suave en el mockup (solo desktop, sin reduced motion).
+ * HERO PARALLAX: Animación sutil del mockup hero
+ * Este archivo hace que el mockup se mueva un poco cuando haces scroll
  */
+
+// Función helper: verifica si un elemento es HTML válido
 function isHTMLElement(el) {
   return el instanceof HTMLElement;
 }
 
-function initHeroParallax() {
-  const hero = document.querySelector(".hero");
-  const target = document.querySelector("[data-hero-parallax]");
-  if (!isHTMLElement(hero) || !isHTMLElement(target)) {
-    return;
-  }
-
-  const reduceMotion =
-    typeof window.matchMedia === "function" &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduceMotion) {
-    return;
-  }
-
-  const mqDesktop = window.matchMedia("(min-width: 901px)");
-  let raf = 0;
-  const maxPx = 11;
-
-  function apply(clientX, clientY) {
-    if (!mqDesktop.matches) {
-      target.style.transform = "";
-      return;
+// Buscamos el contenedor del mockup hero
+const root = document.querySelector("[data-hero-mockup-root]");
+if (isHTMLElement(root)) {
+  // Buscamos el elemento que se va a mover
+  const parallax = root.querySelector("[data-hero-parallax]");
+  if (isHTMLElement(parallax)) {
+    // Variables para optimizar el scroll
+    let ticking = false;
+    let lastKnownScrollY = 0;
+    
+    // Función: Actualiza la posición del parallax
+    function updateParallax() {
+      // Calculamos el desplazamiento (0.08 = velocidad del parallax)
+      const offset = lastKnownScrollY * 0.08;
+      // Aplicamos la transformación con GPU acceleration
+      parallax.style.transform = `translate3d(0, ${offset}px, 0)`;
+      ticking = false;
     }
-    const rect = hero.getBoundingClientRect();
-    const nx = (clientX - rect.left) / rect.width - 0.5;
-    const ny = (clientY - rect.top) / rect.height - 0.5;
-    const tx = Math.round(nx * maxPx * 2);
-    const ty = Math.round(ny * maxPx * 2);
-    target.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
-  }
-
-  function onMove(e) {
-    if (!mqDesktop.matches) return;
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(function () {
-      apply(e.clientX, e.clientY);
-    });
-  }
-
-  function reset() {
-    cancelAnimationFrame(raf);
-    target.style.transform = "";
-  }
-
-  hero.addEventListener("pointermove", onMove, { passive: true });
-  hero.addEventListener("pointerleave", reset);
-
-  if (typeof mqDesktop.addEventListener === "function") {
-    mqDesktop.addEventListener("change", reset);
-  } else if (typeof mqDesktop.addListener === "function") {
-    mqDesktop.addListener(reset);
+    
+    // Evento: Scroll de la ventana (optimizado con requestAnimationFrame)
+    window.addEventListener("scroll", function () {
+      lastKnownScrollY = window.scrollY || window.pageYOffset || 0;
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(updateParallax);
+      }
+    }, { passive: true });
   }
 }
-
-initHeroParallax();
